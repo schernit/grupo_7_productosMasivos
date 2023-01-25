@@ -1,0 +1,22 @@
+{
+  "name": "proyectogrupal",
+  "version": "1.0.0",
+  "description": "El proyecto a realizar será un e-commerce destinado a la venta y distribución ? de productos comestibles (lácteos, enlatados, cereales y derivados, frescos como: carnes ...).\r Orientado a aquellas personas mayores de 18 años, que buscan comprar y obtener ofertas sin salir de su casa.",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schernit/grupo_7_productosMasivos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schernit/grupo_7_productosMasivos/issues"
+  },
+  "homepage": "https://github.com/schernit/grupo_7_productosMasivos#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
