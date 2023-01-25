@@ -1,0 +1,2 @@
+El proyecto a realizar será un e-commerce destinado a la venta y distribución ? de productos comestibles (lácteos, enlatados, cereales y derivados, frescos como: carnes ...).
+Orientado a aquellas personas mayores de 18 años, que buscan comprar y obtener ofertas sin salir de su casa. 
