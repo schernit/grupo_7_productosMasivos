@@ -11,7 +11,18 @@ app.listen(3000, () => {
 app.get("/", (req,res) => {
 
     res.sendFile(path.join(__dirname, "/views/index.html"));
-    //res.send ("hola mundo");
+    
 });
 
+
+app.get("/views2", (req,res) => {
+    try{
+        res.sendFile(path.join (__dirname, "/views2/index.html"));
+    }
+    catch(err){
+        console.log ("123ee");
+        console.log (err.console);
+    }
+    //res.send ("hola mundo");
+});
 
