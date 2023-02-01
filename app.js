@@ -3,21 +3,24 @@ const path = require ("path");
 
 const app = express();
 
+//rutas estaticas
+app.use('/img', express.static('img'));
+app.use('/css', express.static('css'));
+
+//abro puerto del servidor
 app.listen(3000, () => {
     console.log ("servidor corriendo");
 });
 
+//busco index 
 app.get("/", (req,res) => {
     res.sendFile(path.join(__dirname, "/paginas/index.html"));    
     
 });
 
-app.get("/css/estilos.css", (req,res) => {
-    res.sendFile(path.join(__dirname, "/css/estilos.css"));
-    
-});
 
 
+/*
 app.get("/views", (req,res) => {
     try{
         res.sendFile(path.join (__dirname, "/views2/index.html"));
@@ -27,3 +30,4 @@ app.get("/views", (req,res) => {
         console.log (err.console);
     }
 });
+*/
