@@ -1,7 +1,6 @@
-header {
-    background-color: rgb(255,255,255);
-    margin: 10px;
-}
+.header{
+	background-color:white;
+ }
 
 .logo{
     margin: 0 0 0 2px;
@@ -9,8 +8,8 @@ header {
     text-align: justify;
     width: 300px;
     height: 300px;
-    display: table-cell;
     vertical-align: middle;
+    display: table-cell;
 }
 .nav{
     font-size: 20px;
