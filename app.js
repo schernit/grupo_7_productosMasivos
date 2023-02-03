@@ -4,8 +4,7 @@ const path = require ("path");
 const app = express();
 
 //rutas estaticas
-app.use('/img', express.static('img'));
-app.use('/css', express.static('css'));
+app.use(express.static("public"));
 
 //abro puerto del servidor
 app.listen(3000, () => {
