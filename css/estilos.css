@@ -1,0 +1,18 @@
+head {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    font-size:24px;
+}
+h1 {
+    color: blue;
+    font-size:24px;
+}
+#titulo3 {
+    color: black;
+    font-size:24px;
+}

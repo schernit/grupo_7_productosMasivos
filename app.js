@@ -3,19 +3,25 @@ const path = require ("path");
 
 const app = express();
 
-app.listen(3000, () => {
+//rutas estaticas
+app.use('/img', express.static('img'));
+app.use('/css', express.static('css'));
 
+//abro puerto del servidor
+app.listen(3000, () => {
     console.log ("servidor corriendo");
 });
 
+//busco index 
 app.get("/", (req,res) => {
-
-    res.sendFile(path.join(__dirname, "/views/index.html"));
+    res.sendFile(path.join(__dirname, "/paginas/index.html"));    
     
 });
 
 
-app.get("/views2", (req,res) => {
+
+/*
+app.get("/views", (req,res) => {
     try{
         res.sendFile(path.join (__dirname, "/views2/index.html"));
     }
@@ -23,6 +29,5 @@ app.get("/views2", (req,res) => {
         console.log ("123ee");
         console.log (err.console);
     }
-    //res.send ("hola mundo");
 });
-
+*/
