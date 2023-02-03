@@ -18,21 +18,9 @@
     text-align: left;
 }
 
-head {
-    font-family: Arial, Helvetica, sans-serif;
+.ofertas-destacadas{
+    color:rgb(236, 149, 18);
     text-align: center;
-}
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-    text-align: center;
-    font-size:24px;
-}
-h1 {
-    color: blue;
-    font-size:24px;
-}
-#titulo3 {
-    color: black;
-    font-size:24px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
