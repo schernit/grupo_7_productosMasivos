@@ -9,4 +9,7 @@ https://www.vea.com.ar/
 https://www.laanonimaonline.com/
 
 Integrantes: 
-Bottale Julieta: 26 años. Lic. en Nutrición. 
+Sebastian Chernitzky: Ing. en sistemas. 47 años.
+Ezequiel Lopez: Lic. adm de empresas. 31 años.
+Mauro Axel Saegh: Estudiante de lic. en sistemas de información. 20 años. 
+Julieta Bottale: Lic. en Nutrición. 26 años.
