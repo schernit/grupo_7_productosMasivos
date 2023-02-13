@@ -13,7 +13,7 @@ app.listen(3000, () => {
 
 //busco index 
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "/paginas/index.html"));    
+    res.sendFile(path.join(__dirname, "/views/index.html"));    
     
 });
 
