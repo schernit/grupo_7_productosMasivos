@@ -4,7 +4,9 @@ const path = require ("path");
 const app = express();
 
 //rutas estaticas
+app.set ("views",path.join(__dirname, "/views"));
 app.use(express.static("public"));
+
 
 //abro puerto del servidor
 app.listen(3000, () => {
@@ -13,11 +15,12 @@ app.listen(3000, () => {
 
 //busco index 
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/index.html"));    
-    
+    res.sendFile(app.get("views")+"/index.html");            
 });
 
-
+app.get("/contacto.html", (req,res) => {
+    res.sendFile(app.get("views")+"/contacto.html");            
+});
 
 /*
 app.get("/views", (req,res) => {
