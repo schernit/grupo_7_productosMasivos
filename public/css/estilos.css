@@ -22,14 +22,31 @@
     
 }
 
+/*
+img{
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+*/
+
+.productoColumna{
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    margin: 20px;
+    width: 20vw;    
+}
+
 .productos-destacados{
     color:rgb(5, 5, 5);
-    text-align: left;
+    text-align: center;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-    width: 100vw;
-    height: 160px;        
+    /*width: 80vw;
+    height: 160px;*/
     flex-direction: row;
     align-items: end;
 }
@@ -51,6 +68,21 @@
     text-align: center;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
+    display: block;
     align-items: end;    
+    position: relative;
+}
+
+@media (min-width: 460px){
+    /*tablet*/
+    body {
+        background-color: white;
+    }
+}
+
+@media (min-width: 768px){
+    /*laptop*/
+    body {
+        background-color: white;
+    }
 }
