@@ -11,24 +11,23 @@
     vertical-align: middle;
     /*display: table-cell;*/
     display: flex;
+    width: 30%;
 }
 .nav{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin: auto;
     text-align: left;
-    display: flex;
-    justify-content: center;
-    
 }
 
-/*
-img{
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+.nav-detalles{
+    display: flex;
+    flex-wrap: wrap;
 }
-*/
+
+.img-banner{
+    width: 100%;
+}
 
 .productoColumna{
     text-align: center;
