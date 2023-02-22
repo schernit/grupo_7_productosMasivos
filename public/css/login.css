@@ -1,0 +1,43 @@
+.login-content{
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+.login-form{
+    padding: 20px 15px;
+}
+
+.control-formulario{
+    margin-bottom: 15px;
+}
+
+.control{
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+.input-style{
+    height: 40px;
+    border: hidden;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.input-style:focus{
+    outline: none;
+}
+
+.boton{
+    width: 100%;
+    background-color: orange;
+    color: #ffffff;
+    border: hidden;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color:#0022AA;
+}
