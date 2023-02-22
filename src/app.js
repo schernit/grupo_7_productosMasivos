@@ -22,6 +22,9 @@ app.get("/contacto.html", (req,res) => {
     res.sendFile(app.get("views")+"/contacto.html");            
 });
 
+app.get("/register", function(req, res){
+    res.sendFile(path.join(__dirname, "views/register.html"))
+})
 /*
 app.get("/views", (req,res) => {
     try{

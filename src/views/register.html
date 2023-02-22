@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/estilos.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce Grupo 7</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <header class="header"> 
+        <img class ="logo" src = "/img/logo-proyecto.jpg">
+        <hr />
+        <p> Compra en cuotas y sin tarjeta de créditos </p>
+        <hr />
+        <nav class="nav"> 
+            <div>
+                <ul> 
+                    <a href="#">Categorías</a>
+                    <a href="#">Ofertas</a>
+                    <a href="#">Ofertas destacadas</a>
+                    <a href="contacto.html">Contacto</a>
+                </ul>
+        </nav>
+        <hr/>
+    </header>
+    <main>
+        <section class="register-content">
+            <form action="/register" method="post" class="signup-form">
+                <div class="control-formulario">
+                    <input type="text" name="nombre-y-apellido" placeholder="Nombre y apellido" class="control input-style">
+                </div>
+                <div class="control-formulario">
+                    <input type="text" name="username" placeholder="Nombre de usuario" class="control input-style">
+                </div>
+                <div class="control-formulario">
+                    <input type="email" name="email" placeholder="Email" class="control input-style">
+                </div>
+                <div class="control-formulario">
+                    <input type="password" name="password" placeholder="Contraseña" class="control input-style">
+                </div>
+                <div class="control-formulario">
+                    <input type="number" name="nro-telefono" placeholder="Nro. de telefono" class="control input-style">
+                </div>
+                <div class="control-formulario">
+                    <input type="number" name="documento" placeholder="Nro. de documento" class="control input-style">
+                </div>
+                <button type="submit" class="boton">Crear Cuenta</button>
+            </form>
+        </section>
+    </main>
