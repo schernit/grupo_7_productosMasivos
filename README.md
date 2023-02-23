@@ -9,6 +9,8 @@ El mismo está orientado a aquellas personas mayores de 18 años, que buscan com
 -https://www.laanonimaonline.com/
 Las paginas elegidas fueron en relación a nuestro proyecto, venta online de alimentos y/o otros productos. Se tomaron como referencia por su estetica y por el atractivo en mostrar las ofertas. 
 
+Link de Trello: https://trello.com/invite/grupo7productosmasivos/ATTI8ebc0c516f755042c5248ebf7a2adbcc2310CBAC
+
 **Integrantes**: 
 + Sebastian Chernitzky: Ing. en sistemas. 47 años.
 + Ezequiel Lopez: Lic. adm de empresas. 31 años.
