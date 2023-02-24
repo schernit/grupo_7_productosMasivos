@@ -72,6 +72,58 @@
     position: relative;
 }
 
+.img-oferta{
+    width: 80%;
+}
+
+/* IMAGENES DE OFERTAS */
+.img-oferta2{
+    width: 50%;
+}
+
+/* DIV CONTENEDOR OFERTAS */
+.div-ofertas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid;
+}
+
+/* PRECIO */
+.div-precio{
+    text-align: justify;
+    font-size: 16pxpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    border-top: 1px solid #ebebeb;
+    flex-direction: row;
+    width: 100%;
+}
+
+.precio{
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(17, 134, 17);
+    font-weight: bold;
+    text-decoration: line-through black;
+}
+
+.div-ofertas1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.precio-queda{
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+
 @media (min-width: 460px){
     /*tablet*/
     body {
