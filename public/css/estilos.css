@@ -74,18 +74,19 @@
 
 .img-oferta{
     width: 80%;
+    text-align: center;
 }
 
 /* IMAGENES DE OFERTAS */
 .img-oferta2{
-    width: 50%;
+    width: 100%;
 }
 
 /* DIV CONTENEDOR OFERTAS */
 .div-ofertas{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     border: 1px solid;
 }
@@ -122,6 +123,12 @@
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
+}
+
+.boton-carrito{
+    text-align: center;
+    margin-left: 25%;
+    border-radius: 8px;
 }
 
 @media (min-width: 460px){
