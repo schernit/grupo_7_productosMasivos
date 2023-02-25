@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .header{
 	background-color:white;
  }
@@ -10,11 +15,28 @@
     height: 20%;
     vertical-align: middle;
     /*display: table-cell;*/
-    display: flex;
-    width: 30%;
+    width: 20%;
 }
+
+.boton-buscar{
+    width: 15%;
+}
+
+.barra-navegacion{
+    width: 70%;
+}
+
+
+.compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .nav{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin: auto;
     text-align: left;
@@ -23,6 +45,11 @@
 .nav-detalles{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    text-align: justify;
+    flex-direction: column;
+    margin: 0px;
+    padding: 1px;
 }
 
 .img-banner{
@@ -67,7 +94,11 @@
     flex-wrap: wrap;
 }
 
-
+.nombre-seccion{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
 
 .ofertas-destacadas{
     color:rgb(236, 149, 18);
@@ -96,9 +127,16 @@
     text-align: center;
 }
 
+.productos{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}
+
 /* IMAGENES DE OFERTAS */
 .img-oferta2{
-    width: 100%;
+    width: 80%;
 }
 
 /* DIV CONTENEDOR OFERTAS */
@@ -113,7 +151,7 @@
 /* PRECIO */
 .div-precio{
     text-align: justify;
-    font-size: 16pxpx;
+    font-size: 12pxpx;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -129,6 +167,8 @@
     color: rgb(17, 134, 17);
     font-weight: bold;
     text-decoration: line-through black;
+    margin: 0px;
+    padding: 0px;
 }
 
 .div-ofertas1{
@@ -142,11 +182,13 @@
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
+    margin: 0px;
+    margin-bottom: 8px;
+    padding: 0px;
 }
 
 .boton-carrito{
     text-align: center;
-    margin-left: 25%;
     border-radius: 8px;
 }
 
