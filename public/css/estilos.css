@@ -50,10 +50,12 @@
     flex-direction: column;
     margin: 0px;
     padding: 1px;
+    text-align: center;
 }
 
 .img-banner{
     width: 100%;
+    box-sizing: border-box;
 }
 
 .productoColumna{
@@ -80,24 +82,25 @@
     
 }
 
-.div-ofertas{
-    color:rgb(5, 5, 5);
+main {
     text-align: center;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    /*width: 80vw;
-    height: 160px;*/
-    flex-direction: row;
-    align-items: end;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+article {
+    margin: 8px;
+    background-color: white;
+    border-top: 1px solid #ebebeb;
+    padding: 8px;
+    width: 80%;
 }
 
 .nombre-seccion{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
+    background-color: #008037;
 }
 
 .ofertas-destacadas{
@@ -134,6 +137,10 @@
     text-align: center;
 }
 
+main{
+    text-align: center;
+}
+
 /* IMAGENES DE OFERTAS */
 .img-oferta2{
     width: 80%;
@@ -143,9 +150,8 @@
 .div-ofertas{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     justify-content: center;
-    border: 1px solid;
 }
 
 /* PRECIO */
@@ -193,80 +199,157 @@
 }
 
 .barra-footer{
-    width: 60%;
+    width: 40%;
     font-size: 10px;
     margin-left: 0px;
+    font-style: italic;
+    padding: 5px;
+    height: 30%;
 }
 
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
-@media (min-width: 370px){
-    /*celu*/
-    body {
-        background-color: white;
-    }
-    ul {
-        width : 80vw;  
-    }
-    h3,h4 {
-        font-size: 10px;
-    }
+.div-iconos-footer{
+    display: flex;
+}
 
-    img {
-
-        width: 70%;
-        height: 70%;
-    }
+.contenedor-final{
+    display: none;
 }
 
 
 @media (min-width: 460px){
     /*tablet*/
-    body {
-        background-color: white;
-    }
-    ul {
-        width : 80vw%;  
-    }
 
-    h3,h4 {
-        font-size: 16px;
+article {
+    margin: 10px;
+    background-color: white;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    width: 45%;
     }
-
-    img {
-
-        width: 90%;
-        height: 90%;
-    }    
+.div-ofertas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    }
+nav{
+    display:none;
+}
+.img-oferta {
+    width: 100%;
+    text-align: center;
+}
+.logo {
+    margin: 0 0 0 2px;
+    padding: 0px;
+    text-align: justify;
+    width: 10%;
+    height: 10%;
+    vertical-align: middle;
+}
+.final{
+    width: 30%;
+}
+.contenedor-final{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #ebebeb;
+}
+.texto-final{
+    text-align: center;
+    font-size: 16px;
+}
+.texto-final2{
+    text-align: center;
+    font-size: 14px;
+}
 }
 
 @media (min-width: 768px){
     /*laptop*/
-    body {
-        background-color: white;
+article {
+    margin: 10px;
+    background-color: white;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    width: 20%;
     }
+.div-ofertas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+        }
 
-    ul {
-        width : 35%;  
-    }
-
-    h3 ,h4 {
-        font-size: 20px;
-    }
-
-    img {
-
-        width: 100%;
-        height: 100%;
-    }
+.nav-detalles{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: justify;
+    margin: 0px;
+    padding: 1px;
+    justify-content: space-around;
+        }
+nav{
+    display:block;
+}
+.img-oferta {
+    width: 100%;
+    text-align: center;
+    height: 80%;
+}
+.productos {
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}
+.boton-carrito {
+    text-align: center;
+    border-radius: 8px;
+    font-size: 12px;
 }
 
-@media (min-width: 1024px){
-    /*laptop*/
-    body {
-        background-color: white;
-    }
-
-    ul {
-        width : 30%;  
-    }
+.barra-footer {
+    width: 30%;
+    font-size: 11px;
+    margin-left: 0px;
+    padding: 5px;
+    font-style: italic;
+    height: 20%;
 }
+.logo {
+    margin: 0 0 0 2px;
+    padding: 0px;
+    text-align: justify;
+    width: 10%;
+    height: 10%;
+    vertical-align: middle;
+}
+.final{
+    width: 30%;
+}
+.contenedor-final{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 2px solid #ebebeb;
+}
+.texto-final{
+    text-align: center;
+    font-size: 16px;
+}
+.texto-final2{
+    text-align: center;
+    font-size: 14px;
+}
+}
+
