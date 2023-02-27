@@ -131,11 +131,12 @@ article {
 }
 
 .productos{
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     text-align: center;
 }
+
 
 main{
     text-align: center;
@@ -165,7 +166,7 @@ main{
 /* PRECIO */
 .div-precio{
     text-align: justify;
-    font-size: 12pxpx;
+    font-size: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -190,6 +191,7 @@ main{
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    margin-left: auto;
 }
 
 .precio-queda{
@@ -284,13 +286,24 @@ nav{
 
 @media (min-width: 768px){
     /*laptop*/
-article {
-    margin: 10px;
+
+.article-detalle {
+    margin: 0px;
     background-color: white;
     border-top: 1px solid #ebebeb;
-    padding: 15px;
-    width: 20%;
+    padding: 0px;
+    width: 40%;
     }
+
+.article-ofertas {
+        margin: 10px;
+        background-color: white;
+        border-top: 1px solid #ebebeb;
+        padding: 15px;
+        width: 20%;
+ }
+    
+            
 
 .div-ofertas{
     display: flex;
@@ -323,15 +336,23 @@ nav{
     height: 80%;
 }
 .productos {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.productos_ofertas {
     font-size: 12px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     text-align: center;
 }
+
 .boton-carrito {
     text-align: center;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .barra-footer {
