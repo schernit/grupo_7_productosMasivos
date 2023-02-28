@@ -1,15 +1,30 @@
 .register-content{
     background-color: #ebebeb;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .signup-form{
     padding: 20px 15px;
+    width: 100%;
+}
+.control-input-style{
+    width: 50%;
 }
 
 .control-formulario{
     margin-bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;    
+    width: 100%;
 }
+
 
 .control{
     width: 100%;
@@ -29,7 +44,7 @@
 }
 
 .boton{
-    width: 100%;
+    width: 50%;
     background-color: orange;
     color: #ffffff;
     border: hidden;
