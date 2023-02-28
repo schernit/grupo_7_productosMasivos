@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">          
     <LINK REL="stylesheet" TYPE="text/css" HREF="../css/estilos.css"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +14,22 @@
 
     <header class="header"> 
     <div class="compra">
-        <img class ="logo" src = "/img/logo-proyecto.jpg">
+        <a href="/"><img class ="logo" src = "/img/logo-proyecto.jpg"> </a>
         <br>
-    <div>
-        <input class="barra-navegacion" type="search" placeholder="que estás buscando?"> 
-        <button class="boton-buscar"> <i class="fa-solid fa-magnifying-glass"></i> </button> 
-    </div>    
-    <i class="fa-solid fa-user"></i>
-    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        <div>
+            <input class="barra-navegacion" type="search" placeholder="que estás buscando?"> 
+            <button class="boton-buscar"> <i class="fa-solid fa-magnifying-glass"></i> </button> 
+        </div>    
+        <a href="/login">
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="/carrito">
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </a>
+
+
     </div>
-        <br>
+    <br>
 
 
 <hr />
@@ -49,7 +56,7 @@
 
 
         <article>
-            <a href="./detalle_producto.html"><img class="img-oferta2" src ="/img/patitas-pollo.jpg"></a>
+            <a href="./detalle_producto"><img class="img-oferta2" src ="/img/patitas-pollo.jpg"></a>
             <div class="div-precio">
                 <h3 class="productos">Patitas de pollo <br>"Granja del sol"</h3> 
             </div>

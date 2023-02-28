@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header{
+	background-color:white;
+ }
+
+.logo{
+    margin: 0 0 0 2px;
+    padding: 0px;
+    text-align: justify;
+    width: 10vw;
+    height: 20%;
+    vertical-align: middle;
+    /*display: table-cell;*/
+    width: 20vh;
+}

@@ -18,11 +18,11 @@ app.get("/", (req,res) => {
     res.sendFile(app.get("views")+"/index.html");            
 });
 
-app.get("/contacto.html", (req,res) => {
+app.get("/contacto", (req,res) => {
     res.sendFile(app.get("views")+"/contacto.html");            
 });
 
-app.get("/detalle_producto.html", (req,res) => {
+app.get("/detalle_producto", (req,res) => {
     res.sendFile(app.get("views")+"/detalle_producto.html");            
 });
 

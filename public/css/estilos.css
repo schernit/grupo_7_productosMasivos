@@ -35,6 +35,11 @@
     align-items: center;
 }
 
+.compra a{
+        text-decoration: none;
+        color: black;
+}
+
 .nav{
     font-size: 16px;
     font-weight: bold;
@@ -346,7 +351,7 @@ nav{
     margin: 0 0 0 2px;
     padding: 0px;
     text-align: justify;
-    width: 10%;
+    width: 20vh;
     height: 10%;
     vertical-align: middle;
 }
