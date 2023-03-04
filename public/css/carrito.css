@@ -1,0 +1,88 @@
+.contenedor-lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ff7312ba;
+    font-size: 16px;
+    font-family: emoji;
+}
+
+h1{
+    color: black;
+    text-align: justify;
+    font-size: 22px;
+    font-family: emoji;
+    padding: 5px;
+    margin: 0px;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+}
+
+.contenedor-detalle-precio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.div-envio-final{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-start;
+}
+
+.contenedor1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family: emoji;
+}
+
+@media (min-width: 460px){
+    /*tablet*/
+    .contenedor-lista{
+      display: none;
+    }
+
+    .contenedor-detalle-precio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: column;
+        align-content: space-around;
+}
+
+@media (min-width: 768px){
+    /*laptop*/
+    .contenedor-lista{
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #ff7312ba;
+        font-size: 16px;
+        font-family: emoji;
+    }
+    
+      }
+      .contenedor-detalle-precio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        align-content: space-around;
+}
+    }
