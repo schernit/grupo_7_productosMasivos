@@ -1,12 +1,7 @@
 const express = require ("express");
-const app = express();
 const router = express.Router();
-const path = require ("path");
+const productosController = require ("../controllers/productosController.js");
 
-app.set ("views",path.join(__dirname, "../views"));
-
-router.get("/detalle_producto", (req,res) => {
-    res.sendFile(app.get("views")+"/detalle_producto.html");            
-});
+router.get("/detalle_producto:idProducto?", productosController.detalle_producto);
 
 module.exports = router;  

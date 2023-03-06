@@ -1,16 +1,8 @@
 const express = require ("express");
-const app = express();
 const router = express.Router();
-const path = require ("path");
+const usuariosController = require ("../controllers/usersController.js");
 
-app.set ("views",path.join(__dirname, "../views"));
-
-router.get("/register", function(req, res){
-    res.sendFile(app.get("views")+"/register.html");                
-})
-
-router.get("/login", function(req, res){
-    res.sendFile(app.get("views")+"/login.html"); 
-})
+router.get("/register", usuariosController.register)
+router.get("/login", usuariosController.login)
 
 module.exports = router;  
