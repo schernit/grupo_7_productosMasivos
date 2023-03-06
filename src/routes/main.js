@@ -3,10 +3,8 @@ const app = express();
 const router = express.Router();
 const path = require ("path");
 
-app.set ("views",path.join(__dirname, "../views"));
-
 router.get("/", (req,res) => {
-    res.sendFile(app.get("views")+"/index.html");            
+    res.render ("index");
 });
 
 router.get("/contacto", (req,res) => {
