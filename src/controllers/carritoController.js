@@ -11,6 +11,19 @@ const controlador = {
         res.sendFile(app.get("views")+"/carrito.html");            
     },
     
+    modificarCantidadProducto : (req,res) => {
+        res.sendFile(app.get("views")+"/carrito.html");            
+    },
+
+    eliminarProducto: (req,res) => {
+        res.sendFile(app.get("views")+ "/carrito.html");            
+    },
+
+    agregarProducto: (req,res) => {
+        res.sendFile(app.get("views")+"/carrito.html");            
+    }
+
+
 };
 
 module.exports = controlador;
