@@ -28,12 +28,6 @@
         </a>
     </div>
     <br>
-
-    <%
-        miVariable = miVariable + 10
-        console.log ("paso x aca "+miVariable);
-    %>
-
 <hr />
     <nav class="nav"> 
     <ul type="none" class="nav-detalles"> 
@@ -51,118 +45,51 @@
     <section> 
         <h2 class="nombre-seccion"> 50% off en alimentos congelados </h2>  
 
-   <div class="div-ofertas">
-        <article>
-                <img class="img-oferta" src="/img/Oferta-50.jpg">
-        </article>
+    <div class="div-ofertas">
+            <article>
+                    <img class="img-oferta" src="/img/Oferta-50.jpg">
+            </article>
 
+            <% 
+            
+            let contador = 0
 
-        <article>
-            <a href="../productos/detalle_producto"><img class="img-oferta2" src ="/img/patitas-pollo.jpg"></a>
-            <div class="div-precio">
-                <h3 class="productos">Patitas de pollo <br>"Granja del sol"</h3> 
-            </div>
-            <br>
-            <div class="div-ofertas1">
-                <p class="precio">$700<p>
-                <p class="precio-queda">$350 la 2da unidad</p>
-            </div>
-            <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-            <br>
-            <br>
-        </article>
-   
-    <article>
-        <img class="img-oferta2" src ="/img/hamburguesa.jpg">
-        <div class="div-precio">
-            <h3 class="productos">Hamburguesas<br>"Paladini"</h3> 
-        </div>
-        <br>
-        <div class="div-ofertas1">
-            <p class="precio">$500<p>
-            <p class="precio-queda">$250 la 2da unidad</p>
-        </div>
-        <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-        <br>
-        <br>
-    </article>
+            productos.forEach(producto => { 
 
-    <article>
-        <img class="img-oferta2" src ="/img/arvejas.jpg">
-        <div class="div-precio">
-            <h3 class="productos">Arvejas<br>"Granja del sol"</h3> 
-        </div>
-        <br>
-        <div class="div-ofertas1">
-            <p class="precio">$800<p>
-            <p class="precio-queda">$400 la 2da unidad</p>
-        </div>
-        <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-        <br>
-        <br>
-    </article>
+            contador = contador + 1
+            
+            if (contador % 4 == 0 ){ %>
+                </section> 
+                <br><br>
+                <section> 
+                    <h2 class="nombre-seccion"> 80% en la 2da unidad de alimentos seleccionados </h2>  
+                    <div class="div-ofertas">  
+                        <article>
+                            <img class="img-oferta" src="/img/oferta-80.jpg">
+                        </article>                        
+            <%
+            }
+                
+            %>
 
-</div>
+            <article> 
+                <a href="<%=producto.urlDetalle%>">
+                <img class="img-oferta2" src ="<%=producto.dirImagen%>"></a>
+                <div class="div-precio">
+                    <h3 class="productos"><%=producto.descripcion%><br>"<%=producto.marca%>"</h3> 
+                </div>
+                <br>
+                <div class="div-ofertas1">
+                    <p class="precio"><%=producto.precio%><p>
+                    <p class="precio-queda"><%=producto.precioDescuentoLeyenda%></p>
+                </div>
+                <button class= "boton-carrito">AÑADIR AL CARRITO</button>
+                <br>
+                <br>
+            </article>
+            <% }) %>
+        </div>
     </section>
-
-    <br>
-    <br>
-<section> 
-        <h2 class="nombre-seccion"> 80% en la 2da unidad de alimentos seleccionados </h2>  
-
-<div class="div-ofertas">   
-       
-    <article>
-            <img class="img-oferta" src="/img/oferta-80.jpg">
-    </article>
-
-    <article>
-        <img class="img-oferta2" src ="/img/mermelada.jpg">
-        <div class="div-precio">
-            <h3 class="productos">Mermelada de frutilla <br>"La Campagnola"</h3> 
-        </div>
-        <br>
-        <div class="div-ofertas1">
-            <p class="precio">$800<p>
-            <p class="precio-queda">$160 la 2da unidad</p>
-        </div>
-        <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-        <br>
-        <br>
-    </article>
-
-<article>
-    <img class="img-oferta2" src ="/img/fideos.jpg">
-    <div class="div-precio">
-        <h3 class="productos">Fideos mostachol<br>"Matarazzo"</h3> 
-    </div>
-    <br>
-    <div class="div-ofertas1">
-        <p class="precio">$500<p>
-        <p class="precio-queda">$100 la 2da unidad</p>
-    </div>
-    <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-    <br>
-    <br>
-</article>
-
-<article>
-    <img class="img-oferta2" src ="/img/salchichas.jpg">
-    <div class="div-precio">
-        <h3 class="productos">Salchichas<br>"Paladini"</h3> 
-    </div>
-    <br>
-    <div class="div-ofertas1">
-        <p class="precio">$510<p>
-        <p class="precio-queda">$102 la 2da unidad</p>
-    </div>
-    <button class= "boton-carrito">AÑADIR AL CARRITO</button>
-    <br>
-    <br>
-</article>
-</div>
-    </section>
-
 </main>
 
 <footer>

@@ -1,15 +1,15 @@
 const express = require ("express");
 const app = express();
 const router = express.Router();
-const path = require ("path");
+const path = require ("path");  
+const productos = require ("../datosProductos.js");
 
 app.set ("views",path.join(__dirname, "../views"));
 
 router.get("/", (req,res) => {
-    let miVariable = 8;
-    //let miVariable = "esto es una prueba";
-    res.render("index",{miVariable});
-    //res.sendFile(app.get("views")+"/index.ejs");            
+
+    res.render("index",{productos});
+    
 });
 
 router.get("/contacto", (req,res) => {
