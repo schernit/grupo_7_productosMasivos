@@ -1,16 +1,18 @@
 const express = require ("express");
 const app = express();
 const router = express.Router();
-/* const path = require ("path"); */
-
-/* app.set ("views",path.join(__dirname, "../views")); */
+const productos = require ("../datosProductos.js");
 
 const controlador = {
 
-    detalle_producto : (req,res) => {
+    index : (req,res) => {
         /* res.sendFile(app.get("views")+"/detalle_producto.html"); */   
-        res.render ("detalle_producto");         
-    }
+        res.render ("index",{productos});         
+    },
+    contacto : (req,res) => {  
+        res.render ("contacto");         
+    },
+    
 
 };
 

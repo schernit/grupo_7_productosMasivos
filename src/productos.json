@@ -70,6 +70,16 @@
         "precio" : 450,
         "moneda" : "$",
         "precioDescuentoLeyenda" : "$150 la 2da unidad"
-    } 
+    },
+    {
+        "id" : 8,
+        "urlDetalle" : "../productos/detalle_producto",
+        "dirImagen" : "/img/salchichas.jpg",
+        "descripcion" : "Salchichas",
+        "marca" : "Paladini",
+        "precio" : 450,
+        "moneda" : "$",
+        "precioDescuentoLeyenda" : "$150 la 2da unidad"
+    }  
     ]
 }
