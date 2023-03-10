@@ -9,9 +9,12 @@ const controlador = {
 
     detalle_producto : (req,res) => {
         /* res.sendFile(app.get("views")+"/detalle_producto.html"); */   
-        res.render ("detalle_producto");         
+        res.render ("detalle_producto"); 
+    }, 
+    creacion_producto: (req,res) => {
+        res.render ("creacion_producto");
     }
 
-};
+}
 
 module.exports = controlador;

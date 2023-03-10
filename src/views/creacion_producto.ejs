@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">     
+    <link rel="stylesheet" href="css/creacion_producto.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce Grupo 7</title>
+    
+</head>
+<body>
+    <header class="header"> 
+        <img class ="logo" src = "/img/logo-proyecto.jpg">
+    </header>
+    <br>
+
+    <main>
+        <h1>Cargar nuevos productos</h1>
+        <br>
+        <section class="register-content">
+            <form action="/creacion_producto" method="post" class="signup-form">
+                <br>
+
+            <label>Código de barra:</label>
+                <input type="text"fr bname="codigo de barra" class="control-input-style">
+                <br>
+
+            <label> Nombre:</label>
+                    <input type="text" name="Nombre" class="control-input-style">
+                <br>
+
+            <label> Descripción:</label>
+                    <input type="text" name="descripcion" class="control-input-style">
+                <br>
+
+            <label> Marca:</label>
+                    <input type="text" name="marca" class="control-input-style">
+                <br>
+
+            <label> Precio:</label>
+                    <input type="text" name="precio" class="control-input-style">
+                <br>
+
+            <label> Imágen del producto:</label>
+                    <input type="file" name="img" placeholder="Imagen del producto" class="control-input-style" accept=".jpg">
+                <br>
+
+            <label>
+                <h3>Categoría</h3>
+                    <select name="categorias">
+                        <option type="text">Selecciona..</option>
+                        <option value="lacteos y derivados">Lácteos y derivados</option>
+                        <option value="almacen">Almacén</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="frescos">Frescos</option>
+                        <option value="bebidas">Bebidas</option>
+                      </select>
+                </label>
+                <br>
+
+                <button type="submit" class="boton">Cargar producto</button>
+            </form>
+    </main>
