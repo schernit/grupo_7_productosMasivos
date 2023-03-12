@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">     
+    <link rel="stylesheet" href="../css/creacion_producto.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <title>ecommerce Grupo 7</title>
+    
+</head>
+<body>
+    <header class="header"> 
+        <img class ="logo" src = "/img/logo-proyecto.jpg">
+    </header>
+    <br>
+
+    <main>
+        <h1 class="titulo">Editar productos</h1>
+        <br>
+        <section class="register-content">
+            <form action="/creacion_producto" method="post" class="signup-form">
+                <br>
+                
+             <div class="contenedor">   
+            <label>Código de barra:</label>
+                <input type="number" name="codigo de barra" ><i class="fa-solid fa-circle-check"></i>
+            </div>    
+                <br>
+
+            <div class="contenedor">
+            <label> Nombre:</label>
+                    <input type="text" name="Nombre" spellcheck="true" required><i class="fa-solid fa-circle-check"></i>
+            </div>
+                <br>
+
+            <div class="contenedor">
+            <label> Descripción:</label>
+                    <input type="text" name="descripcion" spellcheck="true" required><i class="fa-solid fa-circle-check"></i>
+            </div>
+                <br>
+                
+            <div class="contenedor">
+            <label> Marca:</label>
+                    <input type="text" name="marca" required><i class="fa-solid fa-circle-check"></i>
+            </div>
+                <br>
+
+            <div class="contenedor">
+            <label> Precio:</label>
+                    <input type="text" name="precio" required><i class="fa-solid fa-circle-check"></i>
+            </div>
+                <br>
+
+            <div class="contenedor">
+            <label> Imágen del producto:</label>
+            <br>
+                    <input type="file" name="img" placeholder="Imagen del producto" accept=".jpg" required>
+            </div>
+                <br>
+
+            <div class="contenedor">
+            <label>
+                Categoría:
+                    <select name="categorias" required>
+                        <option type="text">Selecciona..</option>
+                        <option value="lacteos y derivados">Lácteos y derivados</option>
+                        <option value="almacen">Almacén</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="frescos">Frescos</option>
+                        <option value="bebidas">Bebidas</option>
+                      </select>
+                </label>
+            </div>
+                <br>
+
+            <div class="contenedor-boton">
+                <button type="submit" class="boton">Editar producto</button>
+            </div>
+
+            </form>
+    </main>
