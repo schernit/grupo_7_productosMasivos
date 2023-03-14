@@ -6,7 +6,7 @@
         "urlDetalle" : "../productos/detalle_producto",
         "dirImagen" : "/img/patitas-pollo.jpg",
         "descripcion" : "Patitas de pollo",
-        "marca" : "Patitas de pollo",
+        "marca" : "Granja del sol",
         "precio" : 700,
         "moneda" : "$",
         "precioDescuentoLeyenda" : "$350 la 2da unidad"
