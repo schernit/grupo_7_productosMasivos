@@ -8,7 +8,7 @@ app.set ("views",path.join(__dirname, "../views"));
 const controlador = {
 
     detalle_producto : (req,res) => {
-        res.sendFile(app.get("views")+"/detalle_producto.html");            
+        res.render("detalle_producto")            
     }
 
 };

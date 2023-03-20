@@ -12,14 +12,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="header"> 
-        <div class="compra">
-            <img class ="logo" src = "/img/logo-proyecto.jpg">
-            <br>
-            <h4 class="tenes-dudas">                             ¿Tenés dudas? Podemos ayudarte</h4>
-        </div>
-            <br>
-    </header>
+        <!-- header -->
+        <%- include('partials/header-users') %>
+        <!-- /header -->
     
     <hr/>
     <main>
@@ -40,13 +35,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer">
-            <img class ="logo" src = "/img/logo-proyecto.jpg">
-            <br>
-            <input class="barra-footer" type="email" placeholder="dejanos tu correo para recibir las ofertas..">
-            <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-instagram"></i>
-        </div>
-        </footer>
+    	<!-- footer -->
+	    <%- include('partials/footer') %>
+	    <!-- /footer -->
 
     </body>

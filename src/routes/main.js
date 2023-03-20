@@ -13,7 +13,7 @@ router.get("/", (req,res) => {
 });
 
 router.get("/contacto", (req,res) => {
-    res.sendFile(app.get("views")+"/contacto.html");            
+    res.render("contacto")           
 });
 
 

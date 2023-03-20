@@ -13,24 +13,9 @@
 
 <body>
 
-    <header class="header"> 
-    <div class="compra">
-        <a href="/"><img class ="logo" src = "/img/logo-proyecto.jpg"> </a>
-        <br>
-        <div>
-            <input class="barra-navegacion" type="search" placeholder="que estás buscando?"> 
-            <button class="boton-buscar"> <i class="fa-solid fa-magnifying-glass"></i> </button> 
-        </div>    
-        <a href="/login">
-            <i class="fa-solid fa-user"></i>
-        </a>
-        <a href="/carrito">
-            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-        </a>
-    </div>
-
-    </header>
-    <br>
+    <!-- header -->
+    <%- include('partials/header-navbar') %>
+    <!-- /header -->
 
 
 <main>
@@ -83,36 +68,9 @@
 
 </main>
 
-<footer>
-<div class="footer">
-    <img class ="logo" src = "/img/logo-proyecto.jpg">
-    <br>
-    <input class="barra-footer" type="email" placeholder="dejanos tu correo para recibir las ofertas..">
-    <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-instagram"></i>
-</div>
-</footer>
-
-<br>
-
-<div class="contenedor-final">
-<div class="final">
-    <h3 class="texto-final">Información útil</h3>
-    <p class="texto-final2">Contacto</p>
-    <p class="texto-final2">Sobre nosotros</p>
-</div>
-    <br>
-<div class="final">
-    <h3 class="texto-final" >¿Como comprar?</h3>
-    <p class="texto-final2">Métodos de pago</p>
-    <p class="texto-final2">Como crear una cuenta</p>
-</div>
-<br>
-<div class="final">
-    <h3 class="texto-final">Preguntas frecuentes</h3>
-    <p class="texto-final2">Envíos</p>
-</div>
-</div>
-
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
 </body>
 
 </html>

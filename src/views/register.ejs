@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">     
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">
+    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/estilos.css">      
     <link rel="stylesheet" href="css/register.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,22 +11,9 @@
     
 </head>
 <body>
-    <header class="header"> 
-        <img class ="logo" src = "/img/logo-proyecto.jpg">
-        <hr />
-        <p> Compra en cuotas y sin tarjeta de créditos </p>
-        <hr />
-        <nav class="nav"> 
-            <div>
-                <ul> 
-                    <a href="#">Categorías</a>
-                    <a href="#">Ofertas</a>
-                    <a href="#">Ofertas destacadas</a>
-                    <a href="contacto.html">Contacto</a>
-                </ul>
-        </nav>
-        <hr/>
-    </header>
+            <!-- header -->
+            <%- include('partials/header-users') %>
+            <!-- /header -->
     <main>
         <section class="register-content">
             <form action="/register" method="post" class="signup-form">
@@ -51,3 +39,6 @@
             </form>
         </section>
     </main>
+    	<!-- footer -->
+	    <%- include('partials/footer') %>
+	    <!-- /footer -->
