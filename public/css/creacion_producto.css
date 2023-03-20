@@ -1,0 +1,93 @@
+.titulo{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #ff740d;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 10px 3px #ffc48e;
+    background-color: white;
+}
+
+label{
+    font-size: 16px;
+    font-family: emoji;
+    text-decoration: underline;
+}
+
+button{
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ffc48e;
+}
+
+input:valid {
+    background-color: #ddffdd;
+  }
+  
+input{
+    border-color: #ebebeb;
+    border-radius: 5px;
+  }
+  
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.contenedor-boton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px #ebebeb solid;
+    padding: 5px;
+}
+
+main{
+    border: 1px solid #ebebeb;
+}
+
+fa-check-circle:before, .fa-circle-check:before {
+    content: "\f058";
+    color: #017f36;
+}
+
+
+@media (min-width: 460px){
+    /*tablet*/
+.contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        padding: 1px;
+    }
+}
+
+@media (min-width: 768px){
+    /*laptop*/
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 1px;
+}
+.titulo {
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #017f36;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 10px 3px #b8ddc6;
+    background-color: white;
+}
+
+button{
+    text-align: center;
+    border-radius: 6px;
+    background-color: #017f36;
+}
+button:hover{
+    background-color: #ffc48e;
+}
+}

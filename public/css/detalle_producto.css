@@ -7,6 +7,45 @@
 	background-color:white;
  }
 
+/*  DETALLE PRODUCTO ESPECIFICO */
+.nombre-producto {
+    font-size: 14px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 19px;
+    text-align: center;
+    background: antiquewhite;
+    font-family: auto;
+    padding: 3px;
+}
+
+.marca1{
+    font-size: 14px;
+    padding: auto;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    font-style: italic;
+}
+
+.descripcion-producto{
+    font-size: 12px;
+}
+
+.seccion{
+    text-align: initial;
+    font-family: none;
+    font-size: 13px;
+    color: #008037;
+}
+
+.div-seccion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background: white;
+    border: 1px solid #ebebeb;
+}
+
 .logo{
     margin: 0 0 0 2px;
     padding: 0px;
@@ -349,10 +388,14 @@ nav{
     text-align: center;
 }
 
-.boton-carrito {
+.bot-carrito {
     text-align: center;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
+    background-color: antiquewhite
+}
+.bot-carrito:hover{
+    background-color: #008037;
 }
 
 .barra-footer {

@@ -1,10 +1,8 @@
 const express = require ("express");
 const app = express();
 const router = express.Router();
+const carritoController = require ("../controllers/carritoController.js");
 
-router.get("/", function(req, res){
-    res.render("carrito");
-    //res.sendFile(app.get("views")+"/carrito.html");                
-})
+router.get("/", carritoController.listarProductos);
 
 module.exports = router;  
