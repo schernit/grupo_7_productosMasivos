@@ -40,13 +40,13 @@
     <section> 
     <div class="div-seccion">
       <a href="/"> <p>Inicio ></p> </a><br>
-        <h2 class="seccion"> Patitas de pollo "Granja del Sol" </h2>  
+        <h2 class="seccion"> Patitas de pollo "Granja del Sol" <%= producto.descripcion %></h2>  
     </div>
 
    <div class="div-ofertas">
 
         <article class="article-detalle">
-            <a href="./detalle_producto.html"><img class="img-oferta2" src ="/img/patitas-pollo.jpg"></a>
+            <a href="<%=producto.urlDetalle%>"><img class="img-oferta2" src =<%=producto.dirImagen%>></a>
             <br>
             <br>
             <br>        
@@ -56,15 +56,15 @@
             
             <div class="div-precio">
                 <h1 class="productos">
-                    <p class="nombre-producto">Patitas de pollo</p>
+                    <p class="nombre-producto">"<%= producto.descripcion %>"</p>
                     <br>   
-                    <p class="marca1">"Granja del sol"</p>     
+                    <p class="marca1">"<%=producto.marca%>"</p>     
                     <br>         
                     <p class="descripcion-producto"> Descripción</p>
                     <br>
                     <div class="div-ofertas1">                    
-                        <p class="precio">$700<p>
-                        <p class="precio-queda">$350 la 2da unidad</p>
+                        <p class="precio"><%= producto.precio %><p>
+                        <p class="precio-queda"><%= producto.precioDescuentoLeyenda %></p>
                     </div>        
                 </h1> 
             </div>
