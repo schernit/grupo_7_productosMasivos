@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">             
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/detalle_producto.css"> 
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/estilos.css"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ecommerce Grupo 7</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-</head>
+
+<%- include('./partials/head.ejs', {cssSheet: "detalle_producto"}) %>
 
 <body>
 
-            <!-- header -->
-            <%- include('partials/header-navbar') %>
-            <!-- /header -->
-<main>
+    <!-- header -->
+    <%- include('./partials/header-navbar.ejs') %>
+    <!-- /header -->
+
+    <main>
     <section> 
-    <div class="div-seccion">
-      <a href="/"> <p>Inicio ></p> </a><br>
-        <h2 class="seccion"> Patitas de pollo "Granja del Sol" <%= producto.descripcion %></h2>  
-    </div>
+        <div class="div-seccion">
+        <a href="/"> <p>Inicio ></p> </a><br>
+            <h2 class="seccion"> Patitas de pollo "Granja del Sol" <%= producto.descripcion %></h2>  
+        </div>
 
-   <div class="div-ofertas">
-
-        <article class="article-detalle">
-            <a href="<%=producto.urlDetalle%>"><img class="img-oferta2" src =<%=producto.dirImagen%>></a>
-            <br>
-            <br>
-            <br>        
-        </article>
-
-        <article class="article-detalle">
-            
-            <div class="div-precio">
-                <h1 class="productos">
-                    <p class="nombre-producto">"<%= producto.descripcion %>"</p>
-                    <br>   
-                    <p class="marca1">"<%=producto.marca%>"</p>     
-                    <br>         
-                    <p class="descripcion-producto"> Descripción</p>
-                    <br>
-                    <div class="div-ofertas1">                    
-                        <p class="precio"><%= producto.precio %><p>
-                        <p class="precio-queda"><%= producto.precioDescuentoLeyenda %></p>
-                    </div>        
-                </h1> 
-            </div>
-            <br>
-            <button class= "bot-carrito">AÑADIR AL CARRITO</button>
-            <br>
-            <br>        
-        </article>
-        
-</div>
+       <div class="div-ofertas">
+            <article class="article-detalle">
+                <a href="<%=producto.urlDetalle%>"><img class="img-oferta2" src =<%=producto.dirImagen%>></a>
+                <br>
+                <br>
+                <br>        
+            </article>
+            <article class="article-detalle">
+                
+                <div class="div-precio">
+                    <h1 class="productos">
+                        <p class="nombre-producto">"<%= producto.descripcion %>"</p>
+                        <br>   
+                        <p class="marca1">"<%=producto.marca%>"</p>     
+                        <br>         
+                        <p class="descripcion-producto"> Descripción</p>
+                        <br>
+                        <div class="div-ofertas1">                    
+                            <p class="precio"><%= producto.precio %><p>
+                            <p class="precio-queda"><%= producto.precioDescuentoLeyenda %></p>
+                        </div>        
+                    </h1> 
+                </div>
+                <br>
+                <button class= "bot-carrito">AÑADIR AL CARRITO</button>
+                <br>
+                <br>        
+            </article>
+        </div>
     </section>
 
     <br>
