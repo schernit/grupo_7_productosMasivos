@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/contactenos.css"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
+<%- include('./partials/head.ejs', {cssSheet: "detalle_producto"}) %>
+    
 <body>
-    <header class="header">
-        <img class ="logo" src = "/img/logo-proyecto.jpg">
-        <nav class="nav"> 
-            <ul type="square"> 
-             <a href="#"><li>Contacto</li></a>
-            </ul>
-         </nav>
+
+    <!-- header -->
+    <%- include('./partials/header-navbar.ejs') %>
+    <!-- /header -->
+    
+    <section class="contactenos">
+                 
          <div>
             <h1>Contactenos</h1>
             <section class="formContactenos" >
@@ -35,6 +31,12 @@
             </section>
          
          </div>
-    </header>
+    </section>
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+
 </body>
+
 </html>

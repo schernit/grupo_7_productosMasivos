@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <LINK REL="stylesheet" TYPE="text/css" HREF="../css/common.css">     
-    <link rel="stylesheet" href="../css/creacion_producto.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <title>ecommerce Grupo 7</title>
-    
-</head>
+
+<%- include('./partials/head.ejs', {cssSheet: "creacion_producto"}) %>
+
 <body>
-    <header class="header"> 
-        <img class ="logo" src = "/img/logo-proyecto.jpg">
-    </header>
+    
+    <!-- header -->
+    <%- include('./partials/header-navbar.ejs') %>
+    <!-- /header -->
+
     <br>
 
     <main>
@@ -81,4 +75,12 @@
             </div>
 
             </form>
+
     </main>
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

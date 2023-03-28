@@ -19,10 +19,15 @@ const controlador = {
     creacion_producto: (req,res) => {
         res.render ("creacion_producto");
     },
+    creacion_store : (req,res) => {
+        res.render ("creacion_producto");
+    },
     edicion_producto: (req,res) => {
         res.render ("edicion_producto");
+    },
+    update_producto: (req,res) => {
+        res.render ("edicion_producto");
     }
-
 }
 
 module.exports = controlador;
