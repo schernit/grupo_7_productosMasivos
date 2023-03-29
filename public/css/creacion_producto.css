@@ -13,20 +13,11 @@ label{
     text-decoration: underline;
 }
 
-button{
+.boton{
     text-align: center;
     border-radius: 6px;
     background-color: #ffc48e;
 }
-
-input:valid {
-    background-color: #ddffdd;
-  }
-  
-input{
-    border-color: #ebebeb;
-    border-radius: 5px;
-  }
   
 .contenedor{
     display: flex;
@@ -82,12 +73,12 @@ fa-check-circle:before, .fa-circle-check:before {
     background-color: white;
 }
 
-button{
+.boton{
     text-align: center;
     border-radius: 6px;
     background-color: #017f36;
 }
-button:hover{
+.boton:hover{
     background-color: #ffc48e;
 }
 }

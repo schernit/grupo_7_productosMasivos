@@ -8,12 +8,12 @@
     <!-- header -->
     <%- include('./partials/header-navbar.ejs') %>
     <!-- /header -->
-
+<br>
     <main>
     <section> 
         <div class="div-seccion">
         <a href="/"> <p>Inicio ></p> </a><br>
-            <h2 class="seccion"> Patitas de pollo "Granja del Sol" <%= producto.descripcion %></h2>  
+            <h2 class="seccion"> <%= producto.descripcion %></h2>  
         </div>
 
        <div class="div-ofertas">
@@ -42,6 +42,11 @@
                 <br>
                 <button class= "bot-carrito">AÑADIR AL CARRITO</button>
                 <br>
+                <br>
+                <a href="/edicion_producto"><button  type= "submit" class= "bot-carrito">Editar producto</button> </a>
+                <br>
+                <br>
+                <button type= "submit" class=bot-carrito>Borrar producto</button>
                 <br>        
             </article>
         </div>
