@@ -101,7 +101,24 @@ const controlador = {
 
 		/* Redireccionar */
 		res.redirect ("/");
-    }
+    },
+    destroy : (req, res) => {
+		let id = req.params.id;
+
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let finalProducts = products.filter(product => {
+			return product.id != id
+		})
+		
+		/* Reconvertir a JSON */
+		let productsJSON = JSON.stringify(finalProducts, null, " ");
+
+		/* Escribir en el archivo JSON en si */
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		res.redirect("/");
+	}
 }
 
 module.exports = controlador;

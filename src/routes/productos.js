@@ -28,4 +28,7 @@ router.post("/creacion_producto", upload.single("imagen"),productosController.cr
 router.get("/edicion_producto/:id", productosController.edicion_producto); 
 router.patch("/edicion_producto/:id", upload.single("imagen"), productosController.update_producto); 
 
+//eliminar producto
+router.delete('/delete/:id', productosController.destroy);
+
 module.exports = router;  
