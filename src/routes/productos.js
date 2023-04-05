@@ -26,6 +26,6 @@ router.post("/creacion_producto", upload.single("imagen"),productosController.cr
 
 //edicion de un producto
 router.get("/edicion_producto/:id", productosController.edicion_producto); 
-router.patch("/edicion_producto/:id", productosController.update_producto); 
+router.patch("/edicion_producto/:id", upload.single("imagen"), productosController.update_producto); 
 
 module.exports = router;  

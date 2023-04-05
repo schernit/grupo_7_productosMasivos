@@ -82,5 +82,29 @@
   "oferta": 90,
   "categoria": "producto",
   "precioDescuentoLeyenda": "$350 la 2da unidad"
+ },
+ {
+  "id": "10",
+  "imagen": "imagen-1680666385119.jpg",
+  "nombre": "Impresora 3D",
+  "descripcion": "Impresora 3D",
+  "marca": "Epson",
+  "precio": 5000,
+  "moneda": "$",
+  "oferta": 10,
+  "categoria": "producto",
+  "precioDescuentoLeyenda": "$350 la 2da unidad"
+ },
+ {
+  "id": "101",
+  "imagen": "imagen-1680666864732.png",
+  "nombre": "Logo huella",
+  "descripcion": "Huella gato",
+  "marca": "NK",
+  "precio": 10,
+  "moneda": "$",
+  "oferta": 10,
+  "categoria": "producto",
+  "precioDescuentoLeyenda": "$350 la 2da unidad"
  }
 ]
