@@ -18,7 +18,7 @@
 
        <div class="div-ofertas">
             <article class="article-detalle">
-                <a href="<%=producto.urlDetalle%>"><img class="img-oferta2" src =<%=producto.dirImagen%>></a>
+                <img class="img-oferta2" src ="/img/<%=producto.imagen%>"></a>
                 <br>
                 <br>
                 <br>        
@@ -46,7 +46,8 @@
                 <a href="/productos/edicion_producto/<%=producto.id%>"><button  type= "submit" class= "bot-carrito">Editar producto</button> </a>
                 <br>
                 <br>
-                <button type= "submit" class=bot-carrito>Borrar producto</button>
+                <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST"><button type= "submit" class=bot-carrito>Borrar producto</button>
+                </form>
                 <br>        
             </article>
         </div>

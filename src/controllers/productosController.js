@@ -1,9 +1,12 @@
 const express = require ("express");
 const app = express();
 const router = express.Router();
+const fs = require("fs");
+const path = require ("path");  
+const productsFilePath = path.join(__dirname, '../data/productos.json');
+
 /* const path = require ("path"); */
 const productos = require ("../datosProductos.js");
-
 
 /* app.set ("views",path.join(__dirname, "../views")); */
 
@@ -20,14 +23,102 @@ const controlador = {
         res.render ("creacion_producto");
     },
     creacion_store : (req,res) => {
-        res.render ("creacion_producto");
+
+        let products = JSON.parse(fs.readFileSync (productsFilePath,"utf-8"));
+
+        //console.log (req.body);
+
+		/* Idea: aprovechar destructuring (...req.body)*/
+
+		/* Crear producto nuevo */
+		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
+		
+		let productoNuevo = {
+			id: products[products.length - 1].id + 1,
+            imagen: req.file ? req.file.filename : "default-image.png",
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            marca: req.body.marca,
+			precio: parseInt(req.body.precio),
+            moneda: "$",            
+			oferta: parseInt(req.body.oferta),
+			categoria: req.body.categoria,
+			precioDescuentoLeyenda : "$350 la 2da unidad"
+		};
+
+		/* Pushear al array de productos */
+    
+		products.push(productoNuevo);
+        //console.table (products);
+
+		/* Reconvertir a JSON */
+		let productsJSON = JSON.stringify(products, null, " ");
+
+		/* Escribir en el archivo JSON en si */
+		fs.writeFileSync(productsFilePath, productsJSON);
+       
+        res.redirect ("/");
     },
     edicion_producto: (req,res) => {
-        res.render ("edicion_producto");
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id);
+		res.render('edicion_producto', {productToEdit})
     },
     update_producto: (req,res) => {
-        res.render ("edicion_producto");
-    }
+        let id = req.params.id;
+		/* Actualizar la información con el producto editado y guardarlo en el JSON */
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let productWithoutEdit = products.find(product => product.id == id);
+		/* Editar producto */
+		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
+		
+		let productoEditado = {
+			id: id,
+			imagen: req.file ? req.file.filename : productWithoutEdit.image,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            marca: req.body.marca,
+			precio: parseInt(req.body.precio),
+            moneda: "$",            
+			oferta: parseInt(req.body.oferta),
+			categoria: req.body.categoria,
+			precioDescuentoLeyenda : "$350 la 2da unidad"
+		};
+
+		/* Reemplazar el producto en el array*/
+		let indice = products.findIndex(product => {
+			return product.id == id
+		})
+		products[indice] = productoEditado;
+
+		/* Reconvertir a JSON */
+		let productsJSON = JSON.stringify(products, null, " ");
+
+		/* Escribir en el archivo JSON en si */
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		/* Redireccionar */
+		res.redirect ("/");
+    },
+    destroy : (req, res) => {
+		let id = req.params.id;
+
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let finalProducts = products.filter(product => {
+			return product.id != id
+		})
+		
+		/* Reconvertir a JSON */
+		let productsJSON = JSON.stringify(finalProducts, null, " ");
+
+		/* Escribir en el archivo JSON en si */
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		res.redirect("/");
+	}
 }
 
 module.exports = controlador;

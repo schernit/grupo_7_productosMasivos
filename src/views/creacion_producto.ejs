@@ -15,7 +15,7 @@
         <h1 class="titulo">Cargar nuevos productos</h1>
         <br>
         <section class="register-content">
-            <form action="/creacion_producto" method="post" class="signup-form">
+            <form action="/productos/creacion_producto" method="post" class="signup-form" enctype="multipart/form-data">
                 <br>
 
             <div class="contenedor">
@@ -32,14 +32,14 @@
 
             <div class="contenedor">
             <label> Precio:</label>
-                    <input type="text" name="precio" required><i class="fa-solid fa-circle-check"></i>
+                    <input type="number" name="precio" required><i class="fa-solid fa-circle-check"></i>
             </div>
                 <br>
 
                 <div class="contenedor">
                     <label>
                         Categoría de oferta:
-                            <select name="categorias" required>
+                            <select name="categoria" required>
                                 <option value="">No aplica</option>
                                 <option value="producto">Producto</option>
                                 <option value="2do producto">2do producto</option>
@@ -58,14 +58,14 @@
 
             <div class="contenedor">
              <label> Descripción:</label>  
-                <textarea></textarea>
+                <textarea name="descripcion"></textarea>
             </div>
             <br>
 
             <div class="contenedor">
             <label> Imágen del producto:</label>
             <br>
-                    <input type="file" name="img" placeholder="Imagen del producto" accept=".jpg" required>
+                    <input type="file" id="imagen" name="imagen" placeholder="Imagen del producto" accept=".jpg, .png" required>
             </div>
                 <br>
 

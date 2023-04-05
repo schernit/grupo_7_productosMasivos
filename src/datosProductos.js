@@ -6,9 +6,7 @@ console.log (rutaProductos);
 
 let miArchivoJson = fs.readFileSync (rutaProductos,"utf-8");
 
-let jsonProductos = JSON.parse(miArchivoJson);
-
-let arrayProductosStock = jsonProductos.Productos;
+let arrayProductosStock = JSON.parse(miArchivoJson);
 
 //console.table (arrayProductosStock);
 
