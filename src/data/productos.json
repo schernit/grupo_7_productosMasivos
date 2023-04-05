@@ -1,85 +1,86 @@
-{
-    "Productos" : 
-    [
-    {
-        "id" : 1,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/patitas-pollo.jpg",
-        "descripcion" : "Patitas de pollo",
-        "marca" : "Granja del sol",
-        "precio" : 700,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$350 la 2da unidad"
-    },
-    {
-        "id" : 2,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/hamburguesa.jpg",
-        "descripcion" : "Hamburguesas",
-        "marca" : "Paladini",
-        "precio" : 500,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$250 la 2da unidad"
-    },
-    {
-        "id" : 3,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/arvejas.jpg",
-        "descripcion" : "Arvejas",
-        "marca" : "Granja del sol",
-        "precio" : 800,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$400 la 2da unidad"
-    },
-    {
-        "id" : 4,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/mermelada.jpg",
-        "descripcion" : "Mermelada de frutilla",
-        "marca" : "La Campagnola",
-        "precio" : 600,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$160 la 2da unidad"
-    },
-    {
-        "id" : 5,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/fideos.jpg",
-        "descripcion" : "Fideos mostachol",
-        "marca" : "Matarazzo",
-        "precio" : 500,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$100 la 2da unidad"
-    },
-    {
-        "id" : 6,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/salchichas.jpg",
-        "descripcion" : "Salchichas",
-        "marca" : "Paladini",
-        "precio" : 510,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$102 la 2da unidad"
-    } ,
-    {
-        "id" : 7,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/salchichas.jpg",
-        "descripcion" : "Leche",
-        "marca" : "Sancor",
-        "precio" : 450,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$150 la 2da unidad"
-    },
-    {
-        "id" : 8,
-        "urlDetalle" : "../productos/detalle_producto",
-        "dirImagen" : "/img/salchichas.jpg",
-        "descripcion" : "Salchichas",
-        "marca" : "Paladini",
-        "precio" : 450,
-        "moneda" : "$",
-        "precioDescuentoLeyenda" : "$150 la 2da unidad"
-    }  
-    ]
-}
+[
+ {
+  "id": 1,
+  "imagen": "patitas-pollo.jpg",
+  "descripcion": "Patitas de pollo",
+  "marca": "Granja del sol",
+  "precio": 700,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$350 la 2da unidad"
+ },
+ {
+  "id": 2,
+  "imagen": "hamburguesa.jpg",
+  "descripcion": "Hamburguesas",
+  "marca": "Paladini",
+  "precio": 500,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$250 la 2da unidad"
+ },
+ {
+  "id": 3,
+  "imagen": "arvejas.jpg",
+  "descripcion": "Arvejas",
+  "marca": "Granja del sol",
+  "precio": 800,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$400 la 2da unidad"
+ },
+ {
+  "id": 4,
+  "imagen": "mermelada.jpg",
+  "descripcion": "Mermelada de frutilla",
+  "marca": "La Campagnola",
+  "precio": 600,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$160 la 2da unidad"
+ },
+ {
+  "id": 5,
+  "imagen": "fideos.jpg",
+  "descripcion": "Fideos mostachol",
+  "marca": "Matarazzo",
+  "precio": 500,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$100 la 2da unidad"
+ },
+ {
+  "id": 6,
+  "imagen": "salchichas.jpg",
+  "descripcion": "Salchichas",
+  "marca": "Paladini",
+  "precio": 510,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$102 la 2da unidad"
+ },
+ {
+  "id": 7,
+  "imagen": "salchichas.jpg",
+  "descripcion": "Leche",
+  "marca": "Sancor",
+  "precio": 450,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$150 la 2da unidad"
+ },
+ {
+  "id": 8,
+  "imagen": "salchichas.jpg",
+  "descripcion": "Salchichas",
+  "marca": "Paladini",
+  "precio": 450,
+  "moneda": "$",
+  "precioDescuentoLeyenda": "$150 la 2da unidad"
+ },
+ {
+  "id": 9,
+  "imagen": "imagen-1680661018201.jpg",
+  "nombre": "playstation 6",
+  "descripcion": "ps6",
+  "marca": "sony",
+  "precio": 10007,
+  "moneda": "$",
+  "oferta": 90,
+  "categoria": "producto",
+  "precioDescuentoLeyenda": "$350 la 2da unidad"
+ }
+]
