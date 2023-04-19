@@ -8,29 +8,60 @@
             <%- include('partials/header-users') %>
             <!-- /header -->
     <main>
-        <section class="register-content">
-            <form action="/register" method="post" class="signup-form">
-                <div class="control-formulario">
-                    <input type="text" name="nombre-y-apellido" placeholder="Nombre y apellido" class="control-input-style">
+    <h1>¡Bienvenido a Supermercado Siete!</h1>
+    <h3>Comprá o vende productos de supermercado desde tu casa</h3>
+    
+    <br>
+        <form>
+            <div class="contenedor">
+                <label> Nombre:</label>
+                        <input type="text" name="nombre" required></i>
                 </div>
-                <div class="control-formulario">
-                    <input type="text" name="username" placeholder="Nombre de usuario" class="control-input-style"">
+                    <br>
+                    
+                <div class="contenedor">
+                <label> Apellido:</label>
+                        <input type="text" name="apellido" required></i>
                 </div>
-                <div class="control-formulario">
-                    <input type="email" name="email" placeholder="Email" class="control-input-style"">
+                    <br>
+    
+                <div class="contenedor">
+                <label> Email:</label>
+                        <input type="email" name="email" required></i>
                 </div>
-                <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="control-input-style">
+                    <br>
+    
+                    <div class="contenedor">
+                        <label>
+                            Categoría:
+                                <select name="categoria" required>
+                                    <option value=""></option>
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Personal">Personal</option>
+                                  </select>
+                            </label>
+                        </div>
+                            <br>
+    
+                 <div class="contenedor">   
+                <label>Contraseña:</label>
+                        <input type="password" minlength="10" maxlength="20" placeholder="10 a 20 caracteres como maximo" requeried name="Contraseña" ></i>
+                </div>    
+                    <br>
+    
+                <div class="contenedor">
+                <label> Imágen de perfil:</label>
+                <br>
+                        <input type="file" id="imagen" name="imagen" placeholder="Imagen de perfil" accept=".jpg, .png" required>
                 </div>
-                <div class="control-formulario">
-                    <input type="number" name="nro-telefono" placeholder="Nro. de telefono" class="control-input-style"">
+                    <br>
+    
+                <div class="contenedor-boton">
+                    <button type="submit" class="boton">Registrarme</button>
                 </div>
-                <div class="control-formulario">
-                    <input type="number" name="documento" placeholder="Nro. de documento" class="control-input-style"">
-                </div>
-                <button type="submit" class="boton">Crear Cuenta</button>
+
             </form>
-        </section>
+        
     </main>
     	<!-- footer -->
 	    <%- include('partials/footer') %>
