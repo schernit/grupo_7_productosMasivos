@@ -1,54 +1,64 @@
-{
-    "usuarios":
-    [{
-        "id": 1,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-      }, {
-        "id": 2,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-      }, {
-        "id": 3,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-      }, {
-        "id": 4,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-      }, {
-        "id": 5,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-      }, {
-        "id": 6,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "categoria": "",
-        "imagen": ""
-        
-      }]
-      
-}
+[
+ {
+  "id": 1,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 2,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 3,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 4,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 5,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 6,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "categoria": "",
+  "imagen": ""
+ },
+ {
+  "id": 7,
+  "imagen": "imagen-1682367814091.jpg",
+  "nombre": "asdasd",
+  "apellido": "asdasd",
+  "email": "saddas@gmail.com",
+  "categoria": "Personal"
+ }
+]
