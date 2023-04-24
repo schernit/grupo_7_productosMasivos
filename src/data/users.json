@@ -60,5 +60,31 @@
   "apellido": "asdasd",
   "email": "saddas@gmail.com",
   "categoria": "Personal"
+ },
+ {
+  "id": 8,
+  "imagen": "imagen-1682372573472.jpg",
+  "nombre": "asdasd",
+  "apellido": "asdasdasd",
+  "email": "saddas@gmail.com",
+  "categoria": "Personal"
+ },
+ {
+  "id": 9,
+  "imagen": "imagen-1682372654901.jpg",
+  "nombre": "asdasd",
+  "apellido": "asdasdas",
+  "email": "saddas@gmail.com",
+  "categoria": "Personal",
+  "password": "sadasdasdadas"
+ },
+ {
+  "id": 10,
+  "imagen": "imagen-1682372782831.jpg",
+  "nombre": "asd",
+  "apellido": "asdasdasd",
+  "email": "saddas@gmail.com",
+  "categoria": "Personal",
+  "password": "$2a$10$sirhX42eoEKRzZaqcb2rD.Ss4VJtdnWc4XFzTOqjaPTOVn/zDFga2"
  }
 ]

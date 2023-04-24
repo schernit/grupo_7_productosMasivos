@@ -4,6 +4,7 @@ const router = express.Router();
 const fs = require("fs");
 const path = require ("path");  
 const usersFilePath = path.join(__dirname, '../data/users.json');
+const bcryptjs = require("bcryptjs");
 
 
 const controlador = {
@@ -33,7 +34,7 @@ const controlador = {
             apellido: req.body.apellido,
             email: req.body.email,
 			categoria: req.body.categoria,
-            contraseña: req.body.contraseña,            
+            password: bcryptjs.hashSync(req.body.password, 10) 
 		};
 
 		/* Pushear al array de productos */
