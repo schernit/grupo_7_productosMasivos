@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require ("path");  
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const bcryptjs = require("bcryptjs");
+const {validationResult} = require("express-validator")
 
 
 const controlador = {
@@ -18,6 +19,16 @@ const controlador = {
     },
 
     processRegister: (req,res) => {
+
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            return res.render("register", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        } else {
+
         let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
 
         //console.log (req.body);
@@ -49,7 +60,7 @@ const controlador = {
 		fs.writeFileSync(usersFilePath, usersJSON);
        
         res.redirect ("/");
-    }
+    }}
 
 };
 

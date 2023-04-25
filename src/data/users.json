@@ -86,5 +86,14 @@
   "email": "saddas@gmail.com",
   "categoria": "Personal",
   "password": "$2a$10$sirhX42eoEKRzZaqcb2rD.Ss4VJtdnWc4XFzTOqjaPTOVn/zDFga2"
+ },
+ {
+  "id": 11,
+  "imagen": "imagen-1682405708248.jpg",
+  "nombre": "asdasd",
+  "apellido": "asdasdasd",
+  "email": "asdasd@a.com",
+  "categoria": "Personal",
+  "password": "$2a$10$0AIZk0cEJdlAigMbmePeQ.6FazU0ZRrAVGqmxn1kHbAmGDdof8ue2"
  }
 ]
