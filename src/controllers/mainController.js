@@ -12,7 +12,6 @@ const controlador = {
     contacto : (req,res) => {  
         res.render ("contacto");         
     },
-    
 
 };
 

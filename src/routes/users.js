@@ -3,7 +3,7 @@ const router = express.Router();
 const usuariosController = require ("../controllers/usersController.js");
 const multer = require('multer'); // Requerimos Multer
 const path = require("path");
-
+const guestMiddleware = require ("../middlewares/guestMiddleware.js");
 
 // ************ Multer config (indicar donde se guarda el archivo, y darle un nombre único) ************
 let storage = multer.diskStorage({
@@ -18,9 +18,9 @@ let storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 
-router.get("/register", usuariosController.register)
+router.get("/register",guestMiddleware, usuariosController.register)
 
-const {body} = require("express-validator")
+const {body, check} = require("express-validator")
 
 const validations = [
     body("nombre").notEmpty().withMessage("Introduzca un nombre."),
@@ -51,9 +51,9 @@ const validations = [
 
 router.post("/register",upload.single("imagen"), validations , usuariosController.processRegister)
 
-router.get("/login", usuariosController.login),
+router.get("/login", guestMiddleware, usuariosController.login),
 
-router.post("/login", usuariosController.processLogin)
-
+router.post("/login", [check("email").isEmail().withMessage("El email es inválido"),
+check("password").isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres")], usuariosController.processLogin)
 
 module.exports = router;  

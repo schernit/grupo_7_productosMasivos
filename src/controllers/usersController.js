@@ -5,7 +5,8 @@ const fs = require("fs");
 const path = require ("path");  
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const bcryptjs = require("bcryptjs");
-const {validationResult} = require("express-validator")
+const {validationResult} = require("express-validator");
+const { use } = require("../routes/users");
 
 
 const controlador = {
@@ -64,24 +65,20 @@ const controlador = {
 
     processLogin: (req, res) => {
 
-        let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
-       /*  let archivoUsuario = fs.readFileSync (path.join(__dirname, '../data/users.json'), "utf-8");
-        let users;
-        if (archivoUsuario == ""){
-            users = [];
-        }else{
-            users=JSON.parse (archivoUsuario);
-        } */
-
+    let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
+       
         for (let i= 0; i < users.length; i++){
             if (req.body.email == users[i].email && bcryptjs.compareSync(req.body.password, users[i].password)){
-           return res.redirect("/");
-            } 
+            req.session.users = users;          
+            return res.redirect("/");   
+        } ;      
         }
-         res.send("Revise el usuario y la contraseña ingresada"); 
-        }
+         res.send ("Datos invalidos"); 
+        },    
+
     };
-    
+      
 
 
 module.exports = controlador;
+ 
