@@ -95,5 +95,32 @@
   "email": "asdasd@a.com",
   "categoria": "Personal",
   "password": "$2a$10$0AIZk0cEJdlAigMbmePeQ.6FazU0ZRrAVGqmxn1kHbAmGDdof8ue2"
+ },
+ {
+  "id": 12,
+  "imagen": "imagen-1682461873263.jpg",
+  "nombre": "Julieta",
+  "apellido": "Bottale",
+  "email": "juli@hotmail.com",
+  "categoria": "Personal",
+  "password": "$2a$10$CrRKehhA/A8GJMnhQTfU5.qTmmSDFeI4k2QkTLjvQk7esxFRaGN8W"
+ },
+ {
+  "id": 13,
+  "imagen": "imagen-1682467812199.jpg",
+  "nombre": "lautaro",
+  "apellido": "n",
+  "email": "lau@hotmail.com",
+  "categoria": "Administrador",
+  "password": "$2a$10$3PnZDCm0St4IbWGzLkGFsup32f1lXOrEqQghnEJTmlT0MR8XjZtOG"
+ },
+ {
+  "id": 14,
+  "imagen": "imagen-1682469778316.jpg",
+  "nombre": "Fernanda",
+  "apellido": "Bottale",
+  "email": "ferbo@hotmail.com",
+  "categoria": "Administrador",
+  "password": "$2a$10$Nes2NHyBs7Ggc8PfmNGY0exdus22DjhqkPVHw2Yr6sLs6n31s0GzG"
  }
 ]

@@ -51,6 +51,9 @@ const validations = [
 
 router.post("/register",upload.single("imagen"), validations , usuariosController.processRegister)
 
-router.get("/login", usuariosController.login)
+router.get("/login", usuariosController.login),
+
+router.post("/login", usuariosController.processLogin)
+
 
 module.exports = router;  

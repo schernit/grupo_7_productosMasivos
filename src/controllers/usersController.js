@@ -12,8 +12,8 @@ const controlador = {
 
     login : (req,res) => {
         res.render("login");            
-    },
-    
+    }, 
+
     register : (req,res) => {
         res.render("register");            
     },
@@ -60,8 +60,28 @@ const controlador = {
 		fs.writeFileSync(usersFilePath, usersJSON);
        
         res.redirect ("/");
-    }}
+    }},
 
-};
+    processLogin: (req, res) => {
+
+        let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
+       /*  let archivoUsuario = fs.readFileSync (path.join(__dirname, '../data/users.json'), "utf-8");
+        let users;
+        if (archivoUsuario == ""){
+            users = [];
+        }else{
+            users=JSON.parse (archivoUsuario);
+        } */
+
+        for (let i= 0; i < users.length; i++){
+            if (req.body.email == users[i].email && bcryptjs.compareSync(req.body.password, users[i].password)){
+           return res.redirect("/");
+            } 
+        }
+         res.send("Revise el usuario y la contraseña ingresada"); 
+        }
+    };
+    
+
 
 module.exports = controlador;
