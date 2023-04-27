@@ -15,10 +15,20 @@
                 
                 <div class="control-formulario">
                     <input type="text" name="email" placeholder="Email" id= "email" class="control input-style">
+                    <% if (locals.errors && errors.email) { %>
+                        <div>
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <br>
                 <div class="control-formulario">
                     <input type="password" name="password" placeholder="Contraseña" class="control input-style">
+                    <% if (locals.errors && errors.password) { %>
+                        <div>
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <label for="">Recordame</label> 
                 <input type="checkbox" name="recordame"> 

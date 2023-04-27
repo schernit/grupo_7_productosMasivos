@@ -49,11 +49,20 @@ const validations = [
     })
 ]
 
+
+const validationsLogin = [
+    body("email")
+        .notEmpty().withMessage("Introduzca un email.").bail()
+        .isEmail().withMessage("Debe introducir un email válido"),
+    body("password").notEmpty().withMessage("Introduzca una contraseña.").isLength({ min: 8 }).
+    withMessage("La contraseña debe tener como minimo 8 caracteres")
+];
+
+
 router.post("/register",upload.single("imagen"), validations , usuariosController.processRegister)
 
 router.get("/login", guestMiddleware, usuariosController.login),
 
-router.post("/login", [check("email").isEmail().withMessage("El email es inválido"),
-check("password").isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres")], usuariosController.processLogin)
+router.post("/login", validationsLogin, usuariosController.processLogin)
 
 module.exports = router;  
