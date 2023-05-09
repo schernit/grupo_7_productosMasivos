@@ -8,9 +8,24 @@ const bcryptjs = require("bcryptjs");
 const {validationResult} = require("express-validator");
 const { use } = require("../routes/users");
 const { error } = require("console");
-
+const db = require("../database/models");
+const usuarios = require("../database/models/usuarios");
+const Op = db.Sequelize.Op;
 
 const controlador = {
+
+    listar: (req,res) => {
+        db.Usuarios.findAll({
+            
+        })
+        .then(usuarios => {
+            //res.render("moviesList", {usuarios})
+            res.send(usuarios)
+        })
+        .catch(error => {
+            res.send(error)
+        })
+    }, 
 
     login : (req,res) => {
         res.render("login");            

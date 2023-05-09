@@ -61,6 +61,8 @@ const validationsLogin = [
 
 router.post("/register",upload.single("imagen"), validations , usuariosController.processRegister)
 
+router.get("/listar", guestMiddleware, usuariosController.listar),
+
 router.get("/login", guestMiddleware, usuariosController.login),
 
 router.post("/login", validationsLogin, usuariosController.processLogin)
