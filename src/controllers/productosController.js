@@ -4,6 +4,10 @@ const router = express.Router();
 const fs = require("fs");
 const path = require ("path");  
 const productsFilePath = path.join(__dirname, '../data/productos.json');
+const db = require("../database/models");
+//const productos = require("../database/models/Productos");
+const Op = db.Sequelize.Op;
+
 
 /* const path = require ("path"); */
 const productos = require ("../datosProductos.js");
@@ -11,6 +15,18 @@ const productos = require ("../datosProductos.js");
 /* app.set ("views",path.join(__dirname, "../views")); */
 
 const controlador = {
+
+	listar: (req,res) => {
+        db.Productos.findAll()
+        .then(productos => {
+            //res.render("moviesList", {usuarios})
+            res.send(productos)
+        })
+        .catch(error => {
+            res.send(error)
+        })
+    }, 
+
 
     detalle_producto : (req,res) => {
         /* res.sendFile(app.get("views")+"/detalle_producto.html"); */   
@@ -24,7 +40,7 @@ const controlador = {
     },
     creacion_store : (req,res) => {
 
-        let products = JSON.parse(fs.readFileSync (productsFilePath,"utf-8"));
+        //let products = JSON.parse(fs.readFileSync (productsFilePath,"utf-8"));
 
         //console.log (req.body);
 
@@ -34,8 +50,8 @@ const controlador = {
 		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
 		
 		let productoNuevo = {
-			id: products[products.length - 1].id + 1,
-            imagen: req.file ? req.file.filename : "default-image.png",
+			//id:0,
+            nombreImagen: req.file ? req.file.filename : "default-image.png",
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             marca: req.body.marca,
@@ -46,18 +62,28 @@ const controlador = {
 			precioDescuentoLeyenda : "$350 la 2da unidad"
 		};
 
+		console.log (productoNuevo);
+
 		/* Pushear al array de productos */
     
-		products.push(productoNuevo);
+		//products.push(productoNuevo);
         //console.table (products);
 
 		/* Reconvertir a JSON */
-		let productsJSON = JSON.stringify(products, null, " ");
+		//let productsJSON = JSON.stringify(products, null, " ");
 
 		/* Escribir en el archivo JSON en si */
-		fs.writeFileSync(productsFilePath, productsJSON);
-       
-        res.redirect ("/");
+		//fs.writeFileSync(productsFilePath, productsJSON);
+
+		db.Productos.create(productoNuevo)
+		.then(productos => {
+            res.redirect("/")
+		})
+        .catch(error => {
+            res.send(error)
+        })
+
+        //res.redirect ("/");
     },
     edicion_producto: (req,res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

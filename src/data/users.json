@@ -122,5 +122,14 @@
   "email": "ferbo@hotmail.com",
   "categoria": "Administrador",
   "password": "$2a$10$Nes2NHyBs7Ggc8PfmNGY0exdus22DjhqkPVHw2Yr6sLs6n31s0GzG"
+ },
+ {
+  "id": 15,
+  "imagen": "imagen-1684969729560.jpg",
+  "nombre": "Sebastian",
+  "apellido": "Cherno",
+  "email": "schernit@gmail.com",
+  "categoria": "Administrador",
+  "password": "$2a$10$CGX2KMmZIv2.rQq9wag60uZFt/T7FUM6HeMpwMJ67GFcFvissKOFu"
  }
 ]

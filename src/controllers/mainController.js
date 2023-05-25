@@ -1,13 +1,25 @@
 const express = require ("express");
 const app = express();
 const router = express.Router();
-const productos = require ("../datosProductos.js");
+const db = require("../database/models");
+const Op = db.Sequelize.Op;
+//const productos = require ("../controllers/productosController.js");
 
 const controlador = {
 
     index : (req,res) => {
-        /* res.sendFile(app.get("views")+"/detalle_producto.html"); */   
-        res.render ("index",{productos});         
+
+        const productos = db.Productos.findAll()
+        
+        .then(productos => {
+            //console.log(productos);
+            res.render ("index",{productos}); 
+            
+        })
+        .catch(error => {
+            res.send(error)
+        })
+        
     },
     contacto : (req,res) => {  
         res.render ("contacto");         

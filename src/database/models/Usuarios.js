@@ -41,14 +41,15 @@ module.exports = (sequelize, dataTypes) => {
 
     const Usuario = sequelize.define(alias, cols, config);
 
-    /*
-    Usuario.associate = function (models) {
+    
+    /*Usuario.associate = function (models) {
         Usuario.belongsTo(models.Genres, {
             as: "genre",
             foreignKey: "genre_id"
         })
-    }
-    */
+    }*/
+    
+    
 
     return Usuario;
-}
+} 
