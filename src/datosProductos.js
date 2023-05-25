@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require ("path");  
 
 let rutaProductos = path.join(__dirname, "data/productos.json")
-console.log (rutaProductos);
+//console.log (rutaProductos);
 
 let miArchivoJson = fs.readFileSync (rutaProductos,"utf-8");
 

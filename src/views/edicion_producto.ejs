@@ -20,7 +20,7 @@
 
             <div class="contenedor">
             <label> Nombre:</label>
-                    <input type="text" name="nombre" spellcheck="true" required><i class="fa-solid fa-circle-check"></i>
+                    <input type="text" name="nombre" value="<%= productToEdit.nombre  %>" spellcheck="true" required><i class="fa-solid fa-circle-check"></i>
             </div>
                 <br>
                 
@@ -52,20 +52,20 @@
 
              <div class="contenedor">   
             <label>Oferta:</label>
-                    <input type="number" name="oferta" ><i class="fa-solid fa-circle-check"></i>
+                    <input type="number" name="oferta" value="<%= productToEdit.oferta  %>" ><i class="fa-solid fa-circle-check"></i>
             </div>    
                 <br>
 
             <div class="contenedor">
              <label> Descripción:</label>  
-                <textarea name="descripcion"></textarea>
+                <textarea id= "descripcion" name= "descripcion" ><%= productToEdit.descripcion  %></textarea>
             </div>
             <br>
 
             <div class="contenedor">
             <label> Imágen del producto:</label>
             <br>
-                    <input type="file" id="imagen" name="imagen" placeholder="Imagen del producto" accept=".jpg, .png" required>
+                    <input type="file" id="imagen" value="<%= productToEdit.nombreImagen  %>" name="imagen" placeholder="Imagen del producto" accept=".jpg, .png" required>
             </div>
                 <br>
 

@@ -84,21 +84,21 @@ const controlador = {
     const resultValidation = validationResult(req);
 
     if(resultValidation.errors.length > 0){
-        console.log("login fallido");
-        console.log(resultValidation.mapped());
+        //console.log("login fallido");
+        //console.log(resultValidation.mapped());
             return res.render("login", {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         } else {
-            console.log("login sin errores");
+            //console.log("login sin errores");
 
      let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
       
      let user = users.find(user => user.email == req.body.email);
             
      if(user == undefined){
-        console.log ("No existe el usuario");
+        //console.log ("No existe el usuario");
         let errors = {
             password: {
               value: '11',

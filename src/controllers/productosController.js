@@ -29,25 +29,21 @@ const controlador = {
 
 
     detalle_producto : (req,res) => {
-        /* res.sendFile(app.get("views")+"/detalle_producto.html"); */   
-        
-        let id = req.params.id
-		let producto = productos.find (producto => producto.id == id)
-        res.render ("detalle_producto", {producto}); 
+
+        db.Productos.findByPk(req.params.id)
+        .then(producto => {
+            //res.render("moviesList", {usuarios})
+            res.render ("detalle_producto", {producto}); 
+        })
+        .catch(error => {
+            res.send(error)
+        })
+
     }, 
     creacion_producto: (req,res) => {
         res.render ("creacion_producto");
     },
     creacion_store : (req,res) => {
-
-        //let products = JSON.parse(fs.readFileSync (productsFilePath,"utf-8"));
-
-        //console.log (req.body);
-
-		/* Idea: aprovechar destructuring (...req.body)*/
-
-		/* Crear producto nuevo */
-		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
 		
 		let productoNuevo = {
 			//id:0,
@@ -62,18 +58,7 @@ const controlador = {
 			precioDescuentoLeyenda : "$350 la 2da unidad"
 		};
 
-		console.log (productoNuevo);
-
-		/* Pushear al array de productos */
-    
-		//products.push(productoNuevo);
-        //console.table (products);
-
-		/* Reconvertir a JSON */
-		//let productsJSON = JSON.stringify(products, null, " ");
-
-		/* Escribir en el archivo JSON en si */
-		//fs.writeFileSync(productsFilePath, productsJSON);
+		//console.log (productoNuevo);
 
 		db.Productos.create(productoNuevo)
 		.then(productos => {
@@ -83,26 +68,27 @@ const controlador = {
             res.send(error)
         })
 
-        //res.redirect ("/");
     },
     edicion_producto: (req,res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id);
-		res.render('edicion_producto', {productToEdit})
+
+		db.Productos.findByPk(req.params.id)
+        .then(productToEdit => {
+            //res.render("moviesList", {usuarios})
+			//console.log (productToEdit);
+            res.render ("edicion_producto", {productToEdit}); 
+        })
+        .catch(error => {
+            res.send(error)
+        })
+
     },
     update_producto: (req,res) => {
-        let id = req.params.id;
-		/* Actualizar la información con el producto editado y guardarlo en el JSON */
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		let productWithoutEdit = products.find(product => product.id == id);
-		/* Editar producto */
-		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
-		
+        let idproductoEdutado = req.params.id;
+
 		let productoEditado = {
-			id: id,
-			imagen: req.file ? req.file.filename : productWithoutEdit.image,
+			//id:0,
+            nombreImagen: req.file ? req.file.filename : "default-image.png",
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             marca: req.body.marca,
@@ -113,37 +99,32 @@ const controlador = {
 			precioDescuentoLeyenda : "$350 la 2da unidad"
 		};
 
-		/* Reemplazar el producto en el array*/
-		let indice = products.findIndex(product => {
-			return product.id == id
+		//console.log (productoEditado);
+
+		let condicion = {where:{id:idproductoEdutado}};
+
+		db.Productos.update(productoEditado,condicion)
+		.then(producto => {
+            res.redirect("/")
 		})
-		products[indice] = productoEditado;
+        .catch(error => {
+            res.send(error)
+        })
 
-		/* Reconvertir a JSON */
-		let productsJSON = JSON.stringify(products, null, " ");
-
-		/* Escribir en el archivo JSON en si */
-		fs.writeFileSync(productsFilePath, productsJSON);
-
-		/* Redireccionar */
-		res.redirect ("/");
     },
     destroy : (req, res) => {
-		let id = req.params.id;
+		let idBorrar = req.params.id;
 
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let condicion = {where:{id:idBorrar}};
 
-		let finalProducts = products.filter(product => {
-			return product.id != id
+		db.Productos.destroy(condicion)
+		.then(producto => {
+            res.redirect("/")
 		})
-		
-		/* Reconvertir a JSON */
-		let productsJSON = JSON.stringify(finalProducts, null, " ");
+        .catch(error => {
+            res.send(error)
+        })
 
-		/* Escribir en el archivo JSON en si */
-		fs.writeFileSync(productsFilePath, productsJSON);
-
-		res.redirect("/");
 	}
 }
 
