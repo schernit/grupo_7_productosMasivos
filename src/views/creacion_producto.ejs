@@ -20,7 +20,7 @@
 
             <div class="contenedor">
             <label> Nombre:</label>
-                    <input type="text" name="nombre" spellcheck="true" required><i class="fa-solid fa-circle-check"></i>
+                    <input type="text" id="nombre" name="nombre" spellcheck="true" ><i class="fa-solid fa-circle-check"></i>
             </div>
                 <br>
                 
@@ -70,8 +70,13 @@
                 <br>
 
             <div class="contenedor-boton">
-                <button type="submit" class="boton">Cargar producto</button>
+                <button type="submit" id="boton" class="boton">Cargar producto</button>
             </div>
+
+            <section class="errores">
+                <ul></ul>
+            </section>
+            
 
             </form>
     </main>
@@ -80,6 +85,7 @@
 	<%- include('partials/footer') %>
 	<!-- /footer -->
 
+    <script src="/js/creacion_producto.js"></script>
 </body>
 
 </html>
