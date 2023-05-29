@@ -45,38 +45,26 @@ const controlador = {
                 oldData: req.body
             });
         } else {
-
-        let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
-
-        //console.log (req.body);
-
-		/* Idea: aprovechar destructuring (...req.body)*/
-
-		/* Crear producto nuevo */
-		/* Para el id, tomar el ultimo elemento, chequear su id y sumarle 1 */
 		
 		let usuarioNuevo = {
-			id: users[users.length - 1].id + 1,
-            imagen: req.file ? req.file.filename : "default-image.png",
+			//id: users[users.length - 1].id + 1,
+            nombreImagen: req.file ? req.file.filename : "default-image.png",
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
 			categoria: req.body.categoria,
-            password: bcryptjs.hashSync(req.body.password, 10) 
+            clave: bcryptjs.hashSync(req.body.password, 10) 
 		};
 
-		/* Pushear al array de productos */
-    
-		users.push(usuarioNuevo);
-        //console.table (products);
+		/* grabar en la base de dato de usuarios */
+        db.Usuarios.create(usuarioNuevo)
+		.then(usuario => {
+            res.redirect("/")
+		})
+        .catch(error => {
+            res.send(error)
+        })
 
-		/* Reconvertir a JSON */
-		let usersJSON = JSON.stringify(users, null, " ");
-
-		/* Escribir en el archivo JSON en si */
-		fs.writeFileSync(usersFilePath, usersJSON);
-       
-        res.redirect ("/");
     }},
 
     processLogin: (req, res) => {
@@ -93,12 +81,57 @@ const controlador = {
         } else {
             //console.log("login sin errores");
 
-     let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
-      
-     let user = users.find(user => user.email == req.body.email);
-            
-     if(user == undefined){
-        //console.log ("No existe el usuario");
+    //let users = JSON.parse(fs.readFileSync (usersFilePath,"utf-8"));
+    //let user = users.find(user => user.email == req.body.email);
+    
+    let mailUIngresado = req.body.email;
+    let condicion = {where:{email:mailUIngresado}};
+
+    db.Usuarios.findOne(condicion)
+    .then(usuarioEncontrado => {
+
+        console.log ("el usuario fue encontrado en la BD:"+usuarioEncontrado.nombre);
+        if (usuarioEncontrado==null){
+            console.log ("usuario no encontrado en la BD");
+            let errors = {
+                password: {
+                  value: '11',
+                  msg: 'El usuario no esta registrado',
+                  param: 'password',
+                  location: 'body'
+                }
+              }
+            return res.render("login", {
+            errors: errors,
+            oldData: req.body})
+    
+        }else{        
+        
+        console.log ("req.body.password: "+req.body.password);
+        console.log ("usuarioEncontrado.password: "+usuarioEncontrado.clave);
+        // chequeo el mail para el usuario encontrado
+        if(bcryptjs.compareSync(req.body.password, usuarioEncontrado.clave)){
+            req.session.user = usuarioEncontrado.id; 
+            console.log ("coincide la clave");
+            res.redirect("/");
+        }else{
+            console.log ("no coincide la clave");
+            let errors = {
+                password: {
+                    value: '11',
+                    msg: 'Usuario o contraseña inválido',
+                    param: 'password',
+                    location: 'body'
+                }
+                }
+            return res.render("login", {
+            errors: errors,
+            oldData: req.body})
+        }
+        }
+
+    })
+    .catch(error => {
         let errors = {
             password: {
               value: '11',
@@ -110,25 +143,8 @@ const controlador = {
         return res.render("login", {
         errors: errors,
         oldData: req.body})
-     }else{
-        //USUARIO ENCONTRADO;
-        if(bcryptjs.compareSync(req.body.password, user.password)){
-            req.session.user = user; 
-            res.redirect("/");
-        }else{
-            let errors = {
-                password: {
-                  value: '11',
-                  msg: 'Usuario o contraseña inválido',
-                  param: 'password',
-                  location: 'body'
-                }
-              }
-            return res.render("login", {
-            errors: errors,
-            oldData: req.body})
-        }
-     }
+    })
+
      
     }
     }
