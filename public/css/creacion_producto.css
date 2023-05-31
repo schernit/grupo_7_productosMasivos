@@ -42,6 +42,16 @@ fa-check-circle:before, .fa-circle-check:before {
     color: #017f36;
 }
 
+.errores{
+    color: red;
+    border: 1px solid rgba(248, 248, 255, 0.704);
+    text-align: left;
+    font-size: 15px;
+}
+
+.ul{
+    list-style-image: linear-gradient(to left bottom, red, green);
+ }
 
 @media (min-width: 460px){
     /*tablet*/
@@ -81,4 +91,7 @@ fa-check-circle:before, .fa-circle-check:before {
 .boton:hover{
     background-color: #ffc48e;
 }
+
+
+
 }

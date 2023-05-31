@@ -26,20 +26,20 @@
                 
             <div class="contenedor">
             <label> Marca:</label>
-                    <input type="text" name="marca" required><i class="fa-solid fa-circle-check"></i>
+                    <input type="text" name="marca" id="marca"><i class="fa-solid fa-circle-check"></i>
             </div>
                 <br>
 
             <div class="contenedor">
             <label> Precio:</label>
-                    <input type="number" name="precio" required><i class="fa-solid fa-circle-check"></i>
+                    <input type="number" name="precio" id="precio"><i class="fa-solid fa-circle-check"></i>
             </div>
                 <br>
 
                 <div class="contenedor">
                     <label>
                         Categoría de oferta:
-                            <select name="categoria" required>
+                            <select name="categoria" id="categoria">
                                 <option value="">No aplica</option>
                                 <option value="producto">Producto</option>
                                 <option value="2do producto">2do producto</option>
@@ -52,20 +52,20 @@
 
              <div class="contenedor">   
             <label>Oferta:</label>
-                    <input type="number" name="oferta" ><i class="fa-solid fa-circle-check"></i>
+                    <input type="number" name="oferta" id="oferta"><i class="fa-solid fa-circle-check"></i>
             </div>    
                 <br>
 
             <div class="contenedor">
              <label> Descripción:</label>  
-                <textarea name="descripcion"></textarea>
+                <textarea name="descripcion" id="descripcion"></textarea>
             </div>
             <br>
 
             <div class="contenedor">
             <label> Imágen del producto:</label>
             <br>
-                    <input type="file" id="imagen" name="imagen" placeholder="Imagen del producto" accept=".jpg, .png" required>
+                    <input type="file" id="imagen" name="imagen" placeholder="Imagen del producto"  accept=".jpg, .png">
             </div>
                 <br>
 
@@ -73,11 +73,10 @@
                 <button type="submit" id="boton" class="boton">Cargar producto</button>
             </div>
 
-            <section class="errores">
-                <ul></ul>
+            <section class="errores"> 
+                <ul type="none" class="ul">  </ul>
             </section>
-            
-
+        
             </form>
     </main>
 
