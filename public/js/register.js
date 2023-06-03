@@ -10,7 +10,7 @@ window.onload = () => {
 
       //valido nombre
       let nombre = document.querySelector("#nombre");
-      if (nombre.value = ""){            
+      if (nombre.value == ""){            
         errores.push ("Se debe completar el nombre");
      }  else if 
             (nombre.value.length < 2){           
