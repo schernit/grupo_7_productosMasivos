@@ -12,10 +12,10 @@
     <h3>Comprá o vende productos de supermercado desde tu casa</h3>
     
     <br>
-        <form action="/user/register" method="post" enctype="multipart/form-data">
+        <form action="/user/register" method="post" enctype="multipart/form-data" class="registro">
             <div class="contenedor">
                 <label> Nombre:</label>
-                        <input type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" ></i>
+                        <input type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" id="nombre"></i>
                 </div>
                 <% if (locals.errors && errors.nombre) { %>
                     <div>
@@ -26,7 +26,7 @@
                 
                 <div class="contenedor">
                 <label> Apellido:</label>
-                        <input type="text" name="apellido" value="<%= locals.oldData ? oldData.apellido : null %>" ></i>
+                        <input type="text" name="apellido" value="<%= locals.oldData ? oldData.apellido : null %>" id="apellido"></i>
                 </div>
                 <% if (locals.errors && errors.apellido) { %>
                     <div>
@@ -37,7 +37,7 @@
     
                 <div class="contenedor">
                 <label> Email:</label>
-                        <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>"></i>
+                        <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"></i>
                 </div>
                 <% if (locals.errors && errors.email) { %>
                     <div>
@@ -65,7 +65,7 @@
     
                  <div class="contenedor">   
                 <label>Contraseña:</label>
-                        <input type="password" minlength="10" maxlength="20" placeholder="10 a 20 caracteres como maximo"  name="password" ></i>
+                        <input type="password" placeholder="10 a 20 caracteres como maximo"  name="password" id="password"></i>
                 </div>  
                 <% if (locals.errors && errors.password) { %>
                     <div>
@@ -87,8 +87,14 @@
                     <br>
     
                 <div class="contenedor-boton">
-                    <button type="submit" class="boton">Registrarme</button>
+                    <button type="submit" class="boton" >Registrarme</button>
                 </div>
+
+            
+            <section class="errores"> 
+                    <ul type="none" class="ul">  </ul>
+            </section>
+            
 
             </form>
         
@@ -96,3 +102,6 @@
     	<!-- footer -->
 	    <%- include('partials/footer') %>
 	    <!-- /footer -->
+
+        <script src="/js/register.js"></script>
+</body>

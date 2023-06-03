@@ -33,6 +33,17 @@ label{
     padding: 5px;
 }
 
+.errores{
+    color: red;
+    border: 1px solid rgba(248, 248, 255, 0.704);
+    text-align: left;
+    font-size: 15px;
+}
+
+.ul{
+     list-style-image: linear-gradient(to left bottom, white, red); 
+}
+
 main{
     border: 1px solid #ebebeb;
 }

@@ -23,7 +23,7 @@
                 </div>
                 <br>
                 <div class="control-formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="control input-style">
+                    <input type="password" name="password" placeholder="Contraseña" id="password" class="control input-style">
                     <% if (locals.errors && errors.password) { %>
                         <div>
                             <%= errors.password.msg %>
@@ -35,6 +35,13 @@
                 <a href="#"><p class="olvidaste-contraseña">¿Olvidaste tu Contraseña?</p></a>
                 <button type="submit" class="boton">Iniciar sesión</button>
                 <a href="/user/register"><p class="registrarte">Registrate</p></a>
+
+              
+                <section class="errores"> 
+                    <ul type="none" class="ul">  </ul>
+            </section>
+            
+
             </form>
         </section>
     </main>
@@ -43,4 +50,5 @@
 	    <%- include('partials/footer') %>
 	    <!-- /footer -->
 
+        <script src="/js/login.js"></script>
     </body>
