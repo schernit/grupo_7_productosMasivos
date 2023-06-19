@@ -9,7 +9,7 @@ const rutasProductos = require("./routes/productos");
 const rutasMain = require("./routes/main");
 const rutasUser = require("./routes/users");
 const rutasCarrito = require("./routes/carrito"); //
-
+const rutasApi = require("./routes/api"); //
 
 //rutas estaticas
 app.set ("view engine","ejs");
@@ -25,6 +25,10 @@ app.use ("/productos",rutasProductos);
 app.use ("/",rutasMain);
 app.use ("/user",rutasUser);
 app.use ("/carrito",rutasCarrito);
+
+//apis
+app.use ("/api",rutasApi);
+
 //app.set ("css",path.join(__dirname, "/views"));
 
 //abro puerto del servidor

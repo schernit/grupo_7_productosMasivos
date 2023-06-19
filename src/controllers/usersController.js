@@ -20,7 +20,27 @@ const controlador = {
         })
         .then(usuarios => {
             //res.render("moviesList", {usuarios})
-            res.send(usuarios)
+            return res.json({
+                total: usuarios.length,
+                data: usuarios,
+                status: 200
+            })
+        })
+        .catch(error => {
+            res.send(error)
+        })
+    }, 
+
+    listarUser: (req,res) => {
+
+        let idUser = req.params.id;
+
+        let condicion = {where:{id:idUser}};
+
+        db.Usuarios.findOne(condicion)
+        .then(usuario => {
+            //res.render("moviesList", {usuarios})
+            res.json(usuario)
         })
         .catch(error => {
             res.send(error)
