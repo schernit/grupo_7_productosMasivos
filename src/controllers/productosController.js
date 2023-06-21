@@ -16,16 +16,74 @@ const productos = require ("../datosProductos.js");
 
 const controlador = {
 
-	listar: (req,res) => {
+    listar: (req,res) => {
         db.Productos.findAll()
         .then(productos => {
             //res.render("moviesList", {usuarios})
-            res.send(productos)
+            //res.send(productos)
+            res.json(productos)
         })
         .catch(error => {
             res.send(error)
         })
     }, 
+
+
+	apiListar: (req,res) => {
+    
+        let campos = {attributes: [
+            'id',
+            'nombreImagen',
+            'nombre',
+            'descripcion',
+            'marca',
+            'precio',
+            'oferta',
+            'categoria',
+            'precioDescuentoLeyenda'
+            ]};
+
+           
+        db.Productos.findAll(campos)
+        .then(productos => {
+
+            return res.json({
+                total: productos.length,
+                data: productos,
+                status: 200
+            })
+
+        })
+        .catch(error => {
+            res.send(error)
+        })
+    }, 
+
+    apiProductoDetalle: (req,res) => {
+
+        let idProducto = req.params.id;
+        let campos = {attributes: [
+            'id',
+            'nombreImagen',
+            'nombre',
+            'descripcion',
+            'marca',
+            'precio',
+            'oferta',
+            'categoria',
+            'precioDescuentoLeyenda'
+            ]};
+
+        db.Productos.findByPk(idProducto,campos)
+        .then(producto => {
+            //res.render("moviesList", {usuarios})
+            res.json(producto)
+        })
+        .catch(error => {
+            res.send(error)
+        })
+    }, 
+
 
 
     detalle_producto : (req,res) => {

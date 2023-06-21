@@ -15,9 +15,7 @@ const Op = db.Sequelize.Op;
 const controlador = {
 
     listar: (req,res) => {
-        db.Usuarios.findAll({
-            
-        })
+        db.Usuarios.findAll({attributes: ['id', 'nombre', 'apellido' , 'email']})
         .then(usuarios => {
             //res.render("moviesList", {usuarios})
             return res.json({
@@ -35,12 +33,17 @@ const controlador = {
 
         let idUser = req.params.id;
 
-        let condicion = {where:{id:idUser}};
-
-        db.Usuarios.findOne(condicion)
+        let campos = {attributes: ['id', 'nombre', 'apellido' , 'email', 'categoria', 'nombreImagen']};
+        
+        //let condicion = {where:{id:idUser}};
+        //db.Usuarios.findOne(condicion)
+        
+        db.Usuarios.findByPk(idUser,campos)
         .then(usuario => {
-            //res.render("moviesList", {usuarios})
-            res.json(usuario)
+            return res.json({
+                data: usuario,
+                status: 200
+            })
         })
         .catch(error => {
             res.send(error)

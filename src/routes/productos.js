@@ -22,7 +22,7 @@ const upload = multer({storage: storage});
 // mostrar detalle del producto
 router.get("/detalle_producto/:id/", productosController.detalle_producto);
 
-router.get("/listar", guestMiddleware, productosController.listar),
+//router.get("/listar", guestMiddleware, productosController.listar);
 
 //creacion de un producto
 router.get("/creacion_producto",authMiddleware, productosController.creacion_producto); 
