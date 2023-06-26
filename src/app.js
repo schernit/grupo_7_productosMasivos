@@ -1,4 +1,5 @@
 const express = require ("express");
+const cors = require('cors');
 const path = require ("path");
 const app = express();
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
@@ -20,6 +21,7 @@ app.use(express.json()); // Para que se usa??
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 app.use(session({secret: "String secreto para encriptar"})); 
 app.use(cookieParser());
+app.use(cors());
 
 app.use ("/productos",rutasProductos);
 app.use ("/",rutasMain);
