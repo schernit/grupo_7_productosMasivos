@@ -41,8 +41,8 @@ window.onload = () => {
             ulErrores.innerHTML += "<li>"+ error+"</li>";
           })
         }
-}  
 
+      }  
     };
   
    
